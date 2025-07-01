@@ -1,0 +1,642 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::home.home",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeHeading": {
+        "edit": {
+          "label": "homeHeading",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeHeading",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "marquee": {
+        "edit": {
+          "label": "marquee",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "marquee",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeVideo": {
+        "edit": {
+          "label": "homeVideo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeVideo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "achievements": {
+        "edit": {
+          "label": "achievements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "achievements",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "achievementHeading": {
+        "edit": {
+          "label": "achievementHeading",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "achievementHeading",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ecoSystemFrame": {
+        "edit": {
+          "label": "ecoSystemFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ecoSystemFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ecoSystemTitle": {
+        "edit": {
+          "label": "ecoSystemTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ecoSystemTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesFrame": {
+        "edit": {
+          "label": "beneficiariesFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesTitle": {
+        "edit": {
+          "label": "beneficiariesTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesDesc": {
+        "edit": {
+          "label": "beneficiariesDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "companySuccess": {
+        "edit": {
+          "label": "companySuccess",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "companySuccess",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "testimonialFrame": {
+        "edit": {
+          "label": "testimonialFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "testimonialFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "testimonialTitle": {
+        "edit": {
+          "label": "testimonialTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "testimonialTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "testimonialDescription": {
+        "edit": {
+          "label": "testimonialDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "testimonialDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "testimonialCard": {
+        "edit": {
+          "label": "testimonialCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "testimonialCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "headChip": {
+        "edit": {
+          "label": "headChip",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "headChip",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "quickIntro": {
+        "edit": {
+          "label": "quickIntro",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "quickIntro",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesSisf": {
+        "edit": {
+          "label": "beneficiariesSisf",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesSisf",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ecoSystemDescription": {
+        "edit": {
+          "label": "ecoSystemDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ecoSystemDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blogFrame": {
+        "edit": {
+          "label": "blogFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blogFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blogTitle": {
+        "edit": {
+          "label": "blogTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blogTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "blogDesc": {
+        "edit": {
+          "label": "blogDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "blogDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesFrame": {
+        "edit": {
+          "label": "facilitiesFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesTitle": {
+        "edit": {
+          "label": "facilitiesTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesDesc": {
+        "edit": {
+          "label": "facilitiesDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "ecosystemPartnerImages": {
+        "edit": {
+          "label": "ecosystemPartnerImages",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ecosystemPartnerImages",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "companyLogos": {
+        "edit": {
+          "label": "companyLogos",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "companyLogos",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "marquee",
+        "homeVideo",
+        "homeHeading"
+      ],
+      "edit": [
+        [
+          {
+            "name": "homeHeading",
+            "size": 6
+          },
+          {
+            "name": "quickIntro",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "headChip",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "marquee",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "achievementHeading",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "achievements",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "homeVideo",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ecoSystemFrame",
+            "size": 6
+          },
+          {
+            "name": "ecoSystemTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ecoSystemDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "blogFrame",
+            "size": 6
+          },
+          {
+            "name": "blogTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "blogDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "companySuccess",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "beneficiariesFrame",
+            "size": 6
+          },
+          {
+            "name": "beneficiariesTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "beneficiariesDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "beneficiariesSisf",
+            "size": 6
+          },
+          {
+            "name": "testimonialFrame",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "testimonialTitle",
+            "size": 6
+          },
+          {
+            "name": "testimonialDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "testimonialCard",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "facilitiesFrame",
+            "size": 6
+          },
+          {
+            "name": "facilitiesTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "facilitiesDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ecosystemPartnerImages",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "companyLogos",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::home.home"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

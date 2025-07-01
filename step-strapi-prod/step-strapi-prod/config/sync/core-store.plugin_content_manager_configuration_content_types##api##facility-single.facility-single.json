@@ -1,0 +1,288 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::facility-single.facility-single",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "facilitiesFrame",
+      "defaultSortBy": "facilitiesFrame",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesFrame": {
+        "edit": {
+          "label": "facilitiesFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesTitle": {
+        "edit": {
+          "label": "facilitiesTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "facilitiesDesc": {
+        "edit": {
+          "label": "facilitiesDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "facilitiesDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "futureFrame": {
+        "edit": {
+          "label": "futureFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "futureFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "futureTitle": {
+        "edit": {
+          "label": "futureTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "futureTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "futureDesc": {
+        "edit": {
+          "label": "futureDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "futureDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "image": {
+        "edit": {
+          "label": "image",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "FuturePlanCard": {
+        "edit": {
+          "label": "FuturePlanCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "FuturePlanCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "journeyTitle": {
+        "edit": {
+          "label": "journeyTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "journeyDesc": {
+        "edit": {
+          "label": "journeyDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "facilitiesFrame",
+        "facilitiesTitle",
+        "facilitiesDesc"
+      ],
+      "edit": [
+        [
+          {
+            "name": "facilitiesFrame",
+            "size": 6
+          },
+          {
+            "name": "facilitiesTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "facilitiesDesc",
+            "size": 6
+          },
+          {
+            "name": "futureFrame",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "futureTitle",
+            "size": 6
+          },
+          {
+            "name": "futureDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "image",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "FuturePlanCard",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "journeyTitle",
+            "size": 6
+          },
+          {
+            "name": "journeyDesc",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::facility-single.facility-single"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

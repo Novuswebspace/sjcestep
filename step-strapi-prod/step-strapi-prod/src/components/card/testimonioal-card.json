@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_card_testimonioal_cards",
+  "info": {
+    "displayName": "TestimonioalCard"
+  },
+  "options": {},
+  "attributes": {
+    "profile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Name": {
+      "type": "string"
+    },
+    "SocialMedia": {
+      "type": "string"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

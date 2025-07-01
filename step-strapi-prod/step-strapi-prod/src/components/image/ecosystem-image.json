@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_image_ecosystem_images",
+  "info": {
+    "displayName": "EcosystemImage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "resource_headings",
+  "info": {
+    "singularName": "resource-heading",
+    "pluralName": "resource-headings",
+    "displayName": "Resource-Heading",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Resource": {
+      "displayName": "heading & description",
+      "type": "component",
+      "repeatable": true,
+      "component": "heading-description.heading-and-description"
+    }
+  }
+}

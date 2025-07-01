@@ -1,0 +1,93 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "aboutHeadingFrame": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "managementFrame": {
+      "type": "string"
+    },
+    "managementTitle": {
+      "type": "string"
+    },
+    "managementDesc": {
+      "type": "text"
+    },
+    "managementCard": {
+      "displayName": "managementCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.management-card"
+    },
+    "advisoryFrame": {
+      "type": "string"
+    },
+    "advisoryTitle": {
+      "type": "string"
+    },
+    "advisoryDescription": {
+      "type": "text"
+    },
+    "ProfileCard": {
+      "displayName": "profileCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "image.profile-card"
+    },
+    "journeyFrame": {
+      "type": "string"
+    },
+    "journeyTitle": {
+      "type": "string"
+    },
+    "journeyDesc": {
+      "type": "text"
+    },
+    "journeyCard": {
+      "displayName": "JourneyCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.journey-card"
+    },
+    "collegeCard": {
+      "displayName": "collegeCard",
+      "type": "component",
+      "repeatable": false,
+      "component": "card.college-card"
+    },
+    "internshipHeading": {
+      "type": "string"
+    },
+    "internshipDesc": {
+      "type": "string"
+    },
+    "aboutTitle": {
+      "type": "string"
+    },
+    "aboutImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

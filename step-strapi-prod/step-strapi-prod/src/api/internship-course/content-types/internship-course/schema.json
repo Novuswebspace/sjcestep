@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "internship_courses",
+  "info": {
+    "singularName": "internship-course",
+    "pluralName": "internship-courses",
+    "displayName": "InternshipCourse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobTitle": {
+      "type": "string"
+    },
+    "disclaimer": {
+      "type": "text"
+    },
+    "InternshipData": {
+      "type": "component",
+      "repeatable": true,
+      "component": "card.internship-card"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "step-strapi",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.1",
+    "@strapi/plugin-i18n": "4.25.1",
+    "@strapi/plugin-users-permissions": "4.25.1",
+    "@strapi/provider-email-nodemailer": "^4.25.8",
+    "@strapi/provider-upload-aws-s3": "^4.25.5",
+    "@strapi/strapi": "4.25.1",
+    "better-sqlite3": "8.6.0",
+    "minio-for-strapi-v4": "^1.0.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-config-sync": "^1.2.5",
+    "strapi-provider-upload-aws-s3": "^3.6.11",
+    "strapi-provider-upload-ts-minio": "^3.1.0",
+    "strapi-upload-minio-v4": "^1.0.1",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "8972ada4-65d3-4e47-b3df-87ad399264ff"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

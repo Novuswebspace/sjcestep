@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_company_success_company_successes",
+  "info": {
+    "displayName": "CompanySuccess",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "number": {
+      "type": "integer"
+    }
+  }
+}

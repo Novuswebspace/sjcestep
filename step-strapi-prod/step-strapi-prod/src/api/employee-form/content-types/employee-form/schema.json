@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_forms",
+  "info": {
+    "singularName": "employee-form",
+    "pluralName": "employee-forms",
+    "displayName": "Employee-Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "college": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "emailSent": {
+      "type": "boolean"
+    }
+  }
+}

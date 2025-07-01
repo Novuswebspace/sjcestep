@@ -1,0 +1,97 @@
+{
+  "key": "plugin_content_manager_configuration_components::card.footer-card",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "companyLogo": {
+        "edit": {
+          "label": "companyLogo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "companyLogo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "address": {
+        "edit": {
+          "label": "address",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "copyRight": {
+        "edit": {
+          "label": "copyRight",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "copyRight",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "companyLogo",
+        "address",
+        "copyRight"
+      ],
+      "edit": [
+        [
+          {
+            "name": "companyLogo",
+            "size": 6
+          },
+          {
+            "name": "address",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "copyRight",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "card.footer-card",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

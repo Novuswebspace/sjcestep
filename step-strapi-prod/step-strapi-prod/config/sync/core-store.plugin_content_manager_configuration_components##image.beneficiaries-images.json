@@ -1,0 +1,76 @@
+{
+  "key": "plugin_content_manager_configuration_components::image.beneficiaries-images",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "alt",
+      "defaultSortBy": "alt",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "image": {
+        "edit": {
+          "label": "image",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "alt": {
+        "edit": {
+          "label": "alt",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "alt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "image",
+        "alt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "image",
+            "size": 6
+          },
+          {
+            "name": "alt",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "image.beneficiaries-images",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

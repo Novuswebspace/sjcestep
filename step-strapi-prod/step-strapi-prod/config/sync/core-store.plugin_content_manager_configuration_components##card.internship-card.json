@@ -1,0 +1,193 @@
+{
+  "key": "plugin_content_manager_configuration_components::card.internship-card",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "jobName",
+      "defaultSortBy": "jobName",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "jobName": {
+        "edit": {
+          "label": "jobName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "jobName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "company": {
+        "edit": {
+          "label": "company",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "company",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "jobDesc": {
+        "edit": {
+          "label": "jobDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "jobDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "place": {
+        "edit": {
+          "label": "place",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "place",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "duration": {
+        "edit": {
+          "label": "duration",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "duration",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "amount": {
+        "edit": {
+          "label": "amount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "amount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "vacancy": {
+        "edit": {
+          "label": "vacancy",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "vacancy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "content": {
+        "edit": {
+          "label": "content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "content",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "jobName",
+        "company",
+        "jobDesc"
+      ],
+      "edit": [
+        [
+          {
+            "name": "jobName",
+            "size": 6
+          },
+          {
+            "name": "company",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "jobDesc",
+            "size": 6
+          },
+          {
+            "name": "place",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "duration",
+            "size": 6
+          },
+          {
+            "name": "amount",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "vacancy",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "content",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "card.internship-card",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

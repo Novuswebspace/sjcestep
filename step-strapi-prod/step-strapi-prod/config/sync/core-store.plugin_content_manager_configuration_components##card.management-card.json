@@ -1,0 +1,135 @@
+{
+  "key": "plugin_content_manager_configuration_components::card.management-card",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "image": {
+        "edit": {
+          "label": "image",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "post": {
+        "edit": {
+          "label": "post",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "post",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "designation": {
+        "edit": {
+          "label": "designation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "designation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "linkedin": {
+        "edit": {
+          "label": "linkedin",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "linkedin",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "image",
+        "name",
+        "post"
+      ],
+      "edit": [
+        [
+          {
+            "name": "image",
+            "size": 6
+          },
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "post",
+            "size": 6
+          },
+          {
+            "name": "designation",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "linkedin",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "card.management-card",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

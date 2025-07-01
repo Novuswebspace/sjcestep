@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_card_future_plan_cards",
+  "info": {
+    "displayName": "FuturePlanCard"
+  },
+  "options": {},
+  "attributes": {
+    "planTitle": {
+      "type": "string"
+    },
+    "planDescription": {
+      "type": "text"
+    }
+  }
+}

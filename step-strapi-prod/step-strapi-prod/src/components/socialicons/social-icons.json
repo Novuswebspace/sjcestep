@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_socialicons_social_icons",
+  "info": {
+    "displayName": "socialIcons"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "regex": "^(https?|ftp):\\/\\/[^\\s/$.?#].[^\\s]*$",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_company_logo_company_logos",
+  "info": {
+    "displayName": "CompanyLogo",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "regex": "^(https?|ftp):\\/\\/[^\\s/$.?#].[^\\s]*$"
+    }
+  }
+}

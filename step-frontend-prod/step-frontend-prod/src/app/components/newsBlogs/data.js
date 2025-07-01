@@ -1,0 +1,220 @@
+export const blogCardData = [
+  {
+    id: 1,
+    heading: "NEWS",
+    path: "/news-blogs/news",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus felis sagittis vitae aliquet. Ut.",
+
+    blogData: [
+      {
+        id: 1,
+        image: "/images/news-blogs/coin.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+      {
+        id: 2,
+        image: "/images/news-blogs/meeting.png",
+        about: "Knowledge",
+        time: "8 min read",
+        title: "How i started my startup",
+        desc: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        profile: "/images/news-blogs/profile-image.png",
+        name: "Akash Shetty",
+        date: "20 Jan 2024",
+      },
+      {
+        id: 3,
+        image: "/images/news-blogs/coin.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+    ],
+  },
+  {
+    id: 2,
+    heading: "RESOURCE",
+    path: "/news-blogs/resource",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus felis sagittis vitae aliquet. Ut.",
+
+    blogData: [
+      {
+        id: 1,
+        image: "/images/news-blogs/coin.png",
+        about: "Knowledge",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+      {
+        id: 2,
+        image: "/images/news-blogs/meeting.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How i started my startup",
+        desc: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        profile: "/images/news-blogs/profile-image.png",
+        name: "Akash Shetty",
+        date: "20 Jan 2024",
+      },
+      {
+        id: 3,
+        image: "/images/news-blogs/coin.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+    ],
+  },
+  {
+    id: 3,
+    heading: "ARTICLE",
+    path: "/news-blogs/article",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Cursus felis sagittis vitae aliquet. Ut.",
+
+    blogData: [
+      {
+        id: 1,
+        image: "/images/news-blogs/coin.png",
+        about: "Knowledge",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+      {
+        id: 2,
+        image: "/images/news-blogs/meeting.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How i started my startup",
+        desc: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+        profile: "/images/news-blogs/profile-image.png",
+        name: "Akash Shetty",
+        date: "20 Jan 2024",
+      },
+      {
+        id: 3,
+        image: "/images/news-blogs/coin.png",
+        about: "Inspiration",
+        time: "8 min read",
+        title: "How to raise funds from 0",
+        desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+        profile: "/images/news-blogs/Avatar.png",
+        name: "Kshitija Shreesha",
+        date: "19 Jan 2024",
+      },
+    ],
+  },
+];
+
+export const blogdetailsData = [
+  {
+    id: 1,
+    image: "/images/news-blogs/coin.png",
+    about: "Inspiration",
+    time: "8 min read",
+    title: "How to raise funds from 0",
+    desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    profile: "/images/news-blogs/Avatar.png",
+    name: "Kshitija Shreesha",
+    date: "19 Jan 2024",
+  },
+  {
+    id: 2,
+    image: "/images/news-blogs/meeting.png",
+    about: "Knowledge",
+    time: "8 min read",
+    title: "How i started my startup",
+    desc: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    profile: "/images/news-blogs/profile-image.png",
+    name: "Akash Shetty",
+    date: "20 Jan 2024",
+  },
+  {
+    id: 3,
+    image: "/images/news-blogs/coin.png",
+    about: "Inspiration",
+    time: "8 min read",
+    title: "How to raise funds from 0",
+    desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    profile: "/images/news-blogs/Avatar.png",
+    name: "Kshitija Shreesha",
+    date: "19 Jan 2024",
+  },
+  {
+    id: 4,
+    image: "/images/news-blogs/coin.png",
+    about: "Inspiration",
+    time: "8 min read",
+    title: "How to raise funds from 0",
+    desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    profile: "/images/news-blogs/Avatar.png",
+    name: "Kshitija Shreesha",
+    date: "19 Jan 2024",
+  },
+  {
+    id: 5,
+    image: "/images/news-blogs/meeting.png",
+    about: "Knowledge",
+    time: "8 min read",
+    title: "How i started my startup",
+    desc: "How do you create compelling presentations that wow your colleagues and impress your managers?",
+    profile: "/images/news-blogs/profile-image.png",
+    name: "Akash Shetty",
+    date: "20 Jan 2024",
+  },
+  {
+    id: 6,
+    image: "/images/news-blogs/coin.png",
+    about: "Inspiration",
+    time: "8 min read",
+    title: "How to raise funds from 0",
+    desc: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get started.",
+    profile: "/images/news-blogs/Avatar.png",
+    name: "Kshitija Shreesha",
+    date: "19 Jan 2024",
+  },
+];
+
+export const profileData = {
+  profile: "/images/news-blogs/profile-image.png",
+  name: "Akash Shetty",
+  date: "20 Jan 2024",
+};
+
+export const newsBannerData = {
+  heading: "News & Blogs",
+  title: "RESOURCES AND INSIGHTS",
+  description:
+    "The latest industry news, interviews, technologies, and resources.",
+};
+
+export const newsIndividualData = {
+  heading: "Blog",
+  title: "How i started my startup",
+  description:
+    "Lorem ipsum dolor sit amet consectetur. Vulputate semper libero dignissim sed pharetra. Lacus in risus condimentum fermentum risus mauris elit dignissim justo.",
+};

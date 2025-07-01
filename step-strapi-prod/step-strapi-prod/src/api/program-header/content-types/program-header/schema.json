@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "program_headers",
+  "info": {
+    "singularName": "program-header",
+    "pluralName": "program-headers",
+    "displayName": "Program-header",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "sisfFrame": {
+      "type": "string"
+    },
+    "beneficiariesTitle": {
+      "type": "string"
+    },
+    "beneficiariesDesc": {
+      "type": "text"
+    },
+    "Acceleropreneur": {
+      "type": "string"
+    },
+    "acceleropreneurTitle": {
+      "type": "string"
+    },
+    "acceleropreneurDesc": {
+      "type": "text"
+    },
+    "sisfBeneficiariesImage": {
+      "displayName": "sisfBeneficiariesImage",
+      "type": "component",
+      "repeatable": true,
+      "component": "image.sisf-beneficiaries-image"
+    },
+    "acceleropreneurImages": {
+      "displayName": "acceleropreneurImages",
+      "type": "component",
+      "repeatable": true,
+      "component": "image.acceleropreneur-images"
+    }
+  }
+}

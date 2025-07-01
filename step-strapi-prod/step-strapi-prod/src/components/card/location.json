@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_card_locations",
+  "info": {
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}

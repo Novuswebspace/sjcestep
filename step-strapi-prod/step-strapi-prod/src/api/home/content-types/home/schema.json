@@ -1,0 +1,127 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "homeHeading": {
+      "type": "text"
+    },
+    "marquee": {
+      "displayName": "marquee",
+      "type": "component",
+      "repeatable": true,
+      "component": "title.marquee"
+    },
+    "homeVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "achievements": {
+      "displayName": "Achievements",
+      "type": "component",
+      "repeatable": true,
+      "component": "title.achievements"
+    },
+    "achievementHeading": {
+      "displayName": "AchievementHeading",
+      "type": "component",
+      "repeatable": false,
+      "component": "title.achievement-heading"
+    },
+    "ecoSystemFrame": {
+      "type": "string"
+    },
+    "ecoSystemTitle": {
+      "type": "string"
+    },
+    "beneficiariesFrame": {
+      "type": "string"
+    },
+    "beneficiariesTitle": {
+      "type": "string"
+    },
+    "beneficiariesDesc": {
+      "type": "text"
+    },
+    "companySuccess": {
+      "displayName": "CompanySuccess",
+      "type": "component",
+      "repeatable": true,
+      "component": "company-success.company-success"
+    },
+    "testimonialFrame": {
+      "type": "string"
+    },
+    "testimonialTitle": {
+      "type": "text"
+    },
+    "testimonialDescription": {
+      "type": "text"
+    },
+    "testimonialCard": {
+      "displayName": "TestimonioalCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.testimonioal-card"
+    },
+    "headChip": {
+      "type": "string"
+    },
+    "quickIntro": {
+      "type": "string"
+    },
+    "beneficiariesSisf": {
+      "type": "string"
+    },
+    "ecoSystemDescription": {
+      "type": "text"
+    },
+    "blogFrame": {
+      "type": "string"
+    },
+    "blogTitle": {
+      "type": "string"
+    },
+    "blogDesc": {
+      "type": "text"
+    },
+    "facilitiesFrame": {
+      "type": "string"
+    },
+    "facilitiesTitle": {
+      "type": "string"
+    },
+    "facilitiesDesc": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "ecosystemPartnerImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "company-logo.company-logo"
+    },
+    "companyLogos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "company-logo.company-logo"
+    }
+  }
+}

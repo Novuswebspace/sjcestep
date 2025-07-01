@@ -1,0 +1,172 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::event.event",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "upcomingEventTitle",
+      "defaultSortBy": "upcomingEventTitle",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "upcomingEventTitle": {
+        "edit": {
+          "label": "upcomingEventTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "upcomingEventTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "upcomingEventDescription": {
+        "edit": {
+          "label": "upcomingEventDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "upcomingEventDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "pastEventTitle": {
+        "edit": {
+          "label": "pastEventTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "pastEventTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "pastEventDescription": {
+        "edit": {
+          "label": "pastEventDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "pastEventDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "upcomingEventTitle",
+        "upcomingEventDescription",
+        "pastEventTitle"
+      ],
+      "edit": [
+        [
+          {
+            "name": "upcomingEventTitle",
+            "size": 6
+          },
+          {
+            "name": "upcomingEventDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "pastEventTitle",
+            "size": 6
+          },
+          {
+            "name": "pastEventDescription",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::event.event"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

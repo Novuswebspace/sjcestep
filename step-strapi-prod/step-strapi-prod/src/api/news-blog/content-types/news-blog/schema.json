@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "news_blogs",
+  "info": {
+    "singularName": "news-blog",
+    "pluralName": "news-blogs",
+    "displayName": "News-Blog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "newsTitle": {
+      "type": "string"
+    },
+    "newsDescription": {
+      "type": "text"
+    },
+    "resourceTitle": {
+      "type": "string"
+    },
+    "resourceDescription": {
+      "type": "text"
+    },
+    "articleTitle": {
+      "type": "string"
+    },
+    "articleDescription": {
+      "type": "text"
+    }
+  }
+}

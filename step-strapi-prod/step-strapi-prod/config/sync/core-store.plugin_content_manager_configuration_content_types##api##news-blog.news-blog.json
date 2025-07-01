@@ -1,0 +1,268 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::news-blog.news-blog",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "heading",
+      "defaultSortBy": "heading",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "heading": {
+        "edit": {
+          "label": "heading",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "heading",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "desc": {
+        "edit": {
+          "label": "desc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "desc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "newsTitle": {
+        "edit": {
+          "label": "newsTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "newsTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "newsDescription": {
+        "edit": {
+          "label": "newsDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "newsDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "resourceTitle": {
+        "edit": {
+          "label": "resourceTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "resourceTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "resourceDescription": {
+        "edit": {
+          "label": "resourceDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "resourceDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "articleTitle": {
+        "edit": {
+          "label": "articleTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "articleTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "articleDescription": {
+        "edit": {
+          "label": "articleDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "articleDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "title",
+        "heading",
+        "desc"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          },
+          {
+            "name": "heading",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "desc",
+            "size": 6
+          },
+          {
+            "name": "newsTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "newsDescription",
+            "size": 6
+          },
+          {
+            "name": "resourceTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "resourceDescription",
+            "size": 6
+          },
+          {
+            "name": "articleTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "articleDescription",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "api::news-blog.news-blog"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

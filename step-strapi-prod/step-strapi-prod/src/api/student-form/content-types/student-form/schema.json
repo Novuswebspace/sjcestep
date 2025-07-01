@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_forms",
+  "info": {
+    "singularName": "student-form",
+    "pluralName": "student-forms",
+    "displayName": "Student-Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "college": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "emailSent": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "nidhi_prayas_schemes",
+  "info": {
+    "singularName": "nidhi-prayas-scheme",
+    "pluralName": "nidhi-prayas-schemes",
+    "displayName": "Nidhi-Prayas-Scheme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nidhiprayasFrame": {
+      "type": "string"
+    },
+    "nidhiprayasTitle": {
+      "type": "text"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "contact": {
+      "displayName": "contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.contact"
+    }
+  }
+}

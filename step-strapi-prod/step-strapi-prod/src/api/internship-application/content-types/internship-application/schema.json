@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "internship_applications",
+  "info": {
+    "singularName": "internship-application",
+    "pluralName": "internship-applications",
+    "displayName": "Internship-Application",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    },
+    "phone": {
+      "type": "string",
+      "required": false
+    },
+    "message": {
+      "type": "text"
+    },
+    "file": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "post": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

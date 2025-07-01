@@ -1,0 +1,490 @@
+/* eslint-disable multiline-ternary */
+/* eslint-disable no-undef */
+/* eslint-disable brace-style */
+
+"use client";
+import { MdOutlineArrowForward } from "react-icons/md";
+import MilestoneCard from "@/components/about-us/journySlider";
+import PrimaryLayout from "@/components/layouts/primaryLayout";
+import Loader from "../components/common/loaders/primaryLoader";
+import { HoverBorderGradient } from "@/components/common/buttonGradient/buttonGradient";
+import Slider from "react-slick";
+import { settingsImpact } from "../components/home/sliderSettings";
+import axios from "axios";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Meta from "../components/common/Meta";
+import { useQuery } from "@tanstack/react-query";
+import DataLoader from "../components/common/loaders/dataLoader";
+
+const AboutUs = () => {
+  // Data fetching
+  const fetchAboutData = async () => {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_URL}/about?populate=*`
+    );
+    return data.data.attributes;
+  };
+
+  const { data: aboutData, isLoading } = useQuery({
+    queryKey: ["aboutData"],
+    queryFn: fetchAboutData,
+    staleTime: 10000,
+    refetchOnWindowFocus: false,
+  });
+
+  //Images data
+  const fetchAboutComponentsData = async () => {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_URL}/about?populate[managementCard][populate]=*&populate[ProfileCard][populate]=*&populate[collegeCard][populate]=*&populate[journeyCard][populate]=*`
+    );
+    return data.data.attributes;
+  };
+
+  const { data: imagesData } = useQuery({
+    queryKey: ["aboutData-images"],
+    queryFn: fetchAboutComponentsData,
+    refetchOnWindowFocus: false,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: (index) => ({
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        delay: 0.3 * index,
+      },
+    }),
+  };
+
+  return (
+    <PrimaryLayout footerColor={true}>
+      <Meta
+        title="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park"
+        description="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park, is a well-established business incubation center located in Mysuru, India. Founded in 1985 with support from the Indian government's Department of Science"
+        keywords="Science, Technology, Entrepreneurs Park"
+        ogTitle="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park"
+        ogDescription="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park, is a well-established business incubation center located in Mysuru, India. Founded in 1985 with support from the Indian government's Department of Science"
+        ogUrl="https://www.sjcestep.in/about-us"
+        twitterTitle="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park"
+        twitterDescription="SJCE-STEP, or SJCE - Science & Technology Entrepreneurs Park, is a well-established business incubation center located in Mysuru, India. Founded in 1985 with support from the Indian government's Department of Science"
+      />
+      <Loader />
+      {isLoading ? (
+        <DataLoader />
+      ) : (
+        <div className="mt-16 md:mt-24 min-h-screen max-w-8xl mx-auto">
+          {/* Section one start */}
+          <section className="px-4 lg:px-20 flex flex-col md:items-center">
+            <div className="flex flex-col justify-center md:items-center">
+              <p className="font-medium text-sm px-3 py-1 w-fit bg-light-gray-sky border border-lightish-gray">
+                {aboutData?.aboutHeadingFrame}
+              </p>
+              <p className="font-montserrat font-black text-4xl mt-3">
+                {aboutData?.aboutTitle}
+              </p>
+              <p className="text-tertiary-gray text-xl mt-6 max-w-3xl lg:text-center">
+                {aboutData?.description}
+              </p>
+            </div>
+            <div className="mt-12 lg:mt-16 h-72 lg:h-auto">
+              <img
+                src={aboutData?.aboutImage?.data?.attributes?.url}
+                alt="sjce-image"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </section>
+          {/* Section one end */}
+
+          {/* Section two start */}
+          <section className="px-4 lg:px-20 py-10 md:py-20 bg-light-gray-sky mt-32">
+            <div className="flex flex-col justify-center lg:items-center">
+              <p className="font-medium text-sm px-3 py-1 w-fit bg-light-gray-sky border border-lightish-gray">
+                {aboutData?.managementFrame}
+              </p>
+              <p className="font-montserrat font-black text-4xl mt-3">
+                {aboutData?.managementTitle}
+              </p>
+              <p className="text-tertiary-gray text-lg mt-6 max-w-2xl lg:text-center">
+                {aboutData?.managementDesc}
+              </p>
+            </div>
+
+            <ul className="hidden lg:px-16 lg:grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-8 mt-16">
+              {imagesData?.managementCard?.slice(0, 3).map((each, index) => (
+                <motion.li
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
+                  className={`${index !== 1 ? "lg:col-span-2 order-1 lg:order-none" : "lg:col-span-3"}`}
+                >
+                  {each?.linkedin ? (
+                    <Link target="_blank" href={each?.linkedin}>
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </Link>
+                  ) : (
+                    <>
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </motion.li>
+              ))}
+            </ul>
+            <ul className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 mt-10 lg:mt-16">
+              {imagesData?.managementCard?.slice(3).map((each, index) => (
+                <motion.li
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
+                >
+                  {each?.linkedin ? (
+                    <Link target="_blank" href={each?.linkedin}>
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </Link>
+                  ) : (
+                    <>
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </motion.li>
+              ))}
+            </ul>
+            <ul className="lg:hidden meet-our-team">
+              <Slider {...settingsImpact}>
+                {imagesData?.managementCard?.map((each, index) =>
+                  each?.linkedin ? (
+                    <Link
+                      target="_blank"
+                      href={each?.linkedin}
+                      key={index}
+                      className="mt-8"
+                    >
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6 text-center">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </Link>
+                  ) : (
+                    <li key={index} className="mt-8">
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        alt={each.name}
+                        className="object-cover h-72 w-full"
+                      />
+                      <div className="mt-6 text-center">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">{each.post}</p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {each.designation}
+                        </p>
+                      </div>
+                    </li>
+                  )
+                )}
+              </Slider>
+            </ul>
+          </section>
+          {/* Section two end */}
+
+          {/* Section four start */}
+          <section className="px-4 lg:px-20 py-10 md:py-20 mt-16 bg-white flex flex-col lg:items-center">
+            <div className="flex flex-col justify-center items-start lg:items-center">
+              <p className="font-medium text-sm px-3 py-1 bg-light-gray-sky border border-lightish-gray">
+                {aboutData?.advisoryFrame}
+              </p>
+              <p className="font-montserrat font-black text-4xl mt-3 break-words">
+                {aboutData?.advisoryTitle}
+              </p>
+              <p className="text-tertiary-gray text-lg mt-6 max-w-2xl lg:text-center">
+                {aboutData?.advisoryDescription}
+              </p>
+            </div>
+            <ul className="mt-76px lg:flex justify-center gap-[90px]">
+              {imagesData?.ProfileCard?.slice(0, 5).map((each, index) => (
+                <motion.li
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
+                  className="hidden lg:flex flex-col items-center text-center"
+                >
+                  {each?.linkedin ? (
+                    <Link
+                      href={each?.linkedin}
+                      target="_blank"
+                      className="inline-block h-24"
+                    >
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        className="w-full h-full"
+                        alt={each?.name}
+                      />
+                    </Link>
+                  ) : (
+                    <div className="h-24">
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        className="w-full h-full"
+                        alt={each?.name}
+                      />
+                    </div>
+                  )}
+                  <p className="font-semibold text-base mt-5">{each.name}</p>
+                  <p className="text-medium-pink text-sm">{each.title}</p>
+                </motion.li>
+              ))}
+              <div className="lg:hidden">
+                <Slider {...settingsImpact}>
+                  {imagesData?.ProfileCard?.map((each, index) =>
+                    each?.linkedin ? (
+                      <Link
+                        key={index}
+                        target="_blank"
+                        className="!flex flex-col justify-center items-center text-center"
+                        href={each?.linkedin}
+                      >
+                        <img
+                          className="object-cover w-full h-full"
+                          src={each?.image?.data?.attributes?.url}
+                          alt="advisor profile-image"
+                        />
+                        <p className="font-semibold text-base mt-5">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-sm">{each.title}</p>
+                      </Link>
+                    ) : (
+                      <li
+                        key={index}
+                        className="!flex flex-col justify-center items-center text-center"
+                      >
+                        <img
+                          className="object-cover w-full h-full"
+                          src={each?.image?.data?.attributes?.url}
+                          alt="advisor profile-image"
+                        />
+                        <p className="font-semibold text-base mt-5">
+                          {each.name}
+                        </p>
+                        <p className="text-medium-pink text-sm">{each.title}</p>
+                      </li>
+                    )
+                  )}
+                </Slider>
+              </div>
+            </ul>
+            <ul className="mt-14 hidden lg:flex justify-center gap-44">
+              {imagesData?.ProfileCard?.slice(5).map((each, index) => (
+                <motion.li
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                  key={index}
+                  className="flex flex-col items-center"
+                >
+                  <div className="h-24">
+                    <img
+                      src={each?.image?.data?.attributes?.url}
+                      className="w-full h-full"
+                      alt="advisor profile-image"
+                    />
+                  </div>
+                  <p className="font-semibold text-base mt-5">{each.name}</p>
+                  <p className="text-medium-pink text-sm">{each.title}</p>
+                </motion.li>
+              ))}
+            </ul>
+          </section>
+          {/* Section four end */}
+
+          <section className="mx-auto mt-20 md:mt-10 bg-light-gray-sky relative md:py-20 py-10 px-4 lg:px-20">
+            <div className="flex flex-col justify-center items-start lg:items-center">
+              <p className="font-medium text-sm px-3 py-1 bg-light-gray-sky border border-lightish-gray">
+                {aboutData?.journeyFrame}
+              </p>
+              <p className="font-montserrat font-black text-4xl mt-3 break-words">
+                {aboutData?.journeyTitle}
+              </p>
+              <p className="text-tertiary-gray text-lg mt-6 max-w-2xl lg:text-center">
+                {aboutData?.journeyDesc}
+              </p>
+            </div>
+            {imagesData && (
+              <MilestoneCard sliderContent={imagesData?.journeyCard} />
+            )}
+            <div className="hidden md:block h-[12%] w-[10%] absolute bottom-[0%] left-[5%] md:bottom-[3%] md:left-[2%] lg:bottom-[0%] lg:left-[8%] bg-light-gray-sky 2xl:left-[12%] 2xl:bottom-[-1%]"></div>
+          </section>
+
+          {/* Section four start */}
+          <section className="px-4 lg:px-20 py-20 mt-4 flex flex-col lg:items-center">
+            <div className="flex flex-col justify-center lg:items-center">
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="font-medium text-sm w-fit px-3 py-1 bg-light-gray-sky border border-lightish-gray"
+              >
+                {aboutData?.collegeCard?.collegeFrame}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="font-montserrat uppercase font-black text-4xl mt-3 break-words"
+              >
+                {aboutData?.collegeCard?.collegeTitle}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 100 }}
+                viewport={{ once: true }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: 0.2 }}
+                className="text-tertiary-gray text-lg mt-6 max-w-2xl lg:text-center"
+              >
+                {aboutData?.collegeCard?.collegeDesc}
+              </motion.p>
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 200 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mt-16 h-72 lg:h-auto"
+            >
+              <img
+                src={imagesData?.collegeCard?.image?.data?.attributes?.url}
+                alt="jss-mahavidyapeetha image"
+                className="object-cover h-full"
+              />
+            </motion.div>
+            <div className="flex justify-center items-center mt-16">
+              <Link
+                href="https://jssonline.org/"
+                type="button"
+                target="_blank"
+                className="bg-orange-dull grow md:grow-0 duration-300  hover:bg-dark-gray h-12 px-6 text-white flex justify-center items-center gap-2"
+              >
+                Know more <MdOutlineArrowForward />
+              </Link>
+            </div>
+          </section>
+          {/* Section four end */}
+
+          {/* Section five start */}
+          <section className="px-4 lg:px-20 py-16 md:py-20 mt-16 bg-light-gray-sky flex flex-col lg:items-center">
+            <div className="flex flex-col justify-center lg:items-center">
+              <p className="font-montserrat uppercase font-black text-4xl">
+                {aboutData?.internshipHeading}
+              </p>
+              <p className="text-tertiary-gray text-lg mt-6 lg:text-center">
+                {aboutData?.internshipDesc}
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2 mt-7 md:mt-14">
+              <HoverBorderGradient
+                containerClassName="rounded-none"
+                as="div"
+                className="dark:bg-black w-full md:w-auto bg-white text-black dark:text-white flex justify-center items-center"
+              >
+                <button
+                  type="button"
+                  className="font-semibold w-full lg:w-auto bg-white hover:bg-light-gray-sky text-extra-light-dark text-base h-12 px-6"
+                >
+                  Learn more
+                </button>
+              </HoverBorderGradient>
+              <Link
+                href="/internship"
+                type="button"
+                className="bg-black w-full md:w-auto hover:bg-black/[0.8] hover:shadow-lg h-12 px-6 text-white flex justify-center items-center gap-2"
+              >
+                Apply <MdOutlineArrowForward />
+              </Link>
+            </div>
+          </section>
+          {/* Section five end */}
+        </div>
+      )}
+    </PrimaryLayout>
+  );
+};
+
+export default AboutUs;

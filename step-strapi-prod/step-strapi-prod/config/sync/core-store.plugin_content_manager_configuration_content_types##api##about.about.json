@@ -1,0 +1,464 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::about.about",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "aboutHeadingFrame",
+      "defaultSortBy": "aboutHeadingFrame",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "aboutHeadingFrame": {
+        "edit": {
+          "label": "aboutHeadingFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aboutHeadingFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "managementFrame": {
+        "edit": {
+          "label": "managementFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "managementFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "managementTitle": {
+        "edit": {
+          "label": "managementTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "managementTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "managementDesc": {
+        "edit": {
+          "label": "managementDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "managementDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "managementCard": {
+        "edit": {
+          "label": "managementCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "managementCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "advisoryFrame": {
+        "edit": {
+          "label": "advisoryFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "advisoryFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "advisoryTitle": {
+        "edit": {
+          "label": "advisoryTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "advisoryTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "advisoryDescription": {
+        "edit": {
+          "label": "advisoryDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "advisoryDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "ProfileCard": {
+        "edit": {
+          "label": "ProfileCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "ProfileCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "journeyFrame": {
+        "edit": {
+          "label": "journeyFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "journeyTitle": {
+        "edit": {
+          "label": "journeyTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "journeyDesc": {
+        "edit": {
+          "label": "journeyDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "journeyCard": {
+        "edit": {
+          "label": "journeyCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "journeyCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "collegeCard": {
+        "edit": {
+          "label": "collegeCard",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "collegeCard",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "internshipHeading": {
+        "edit": {
+          "label": "internshipHeading",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "internshipHeading",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "internshipDesc": {
+        "edit": {
+          "label": "internshipDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "internshipDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "aboutTitle": {
+        "edit": {
+          "label": "aboutTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aboutTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "aboutImage": {
+        "edit": {
+          "label": "aboutImage",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aboutImage",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "aboutHeadingFrame",
+        "description",
+        "journeyCard"
+      ],
+      "edit": [
+        [
+          {
+            "name": "aboutHeadingFrame",
+            "size": 6
+          },
+          {
+            "name": "aboutTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 6
+          },
+          {
+            "name": "aboutImage",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "managementFrame",
+            "size": 6
+          },
+          {
+            "name": "managementTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "managementDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "managementCard",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "advisoryFrame",
+            "size": 6
+          },
+          {
+            "name": "advisoryTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "advisoryDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "ProfileCard",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "journeyFrame",
+            "size": 6
+          },
+          {
+            "name": "journeyTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "journeyDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "internshipHeading",
+            "size": 6
+          },
+          {
+            "name": "internshipDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "journeyCard",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "collegeCard",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::about.about"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

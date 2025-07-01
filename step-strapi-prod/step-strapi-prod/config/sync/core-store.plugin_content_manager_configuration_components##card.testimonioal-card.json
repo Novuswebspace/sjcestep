@@ -1,0 +1,135 @@
+{
+  "key": "plugin_content_manager_configuration_components::card.testimonioal-card",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "Name",
+      "defaultSortBy": "Name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "profile": {
+        "edit": {
+          "label": "profile",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "profile",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "Name": {
+        "edit": {
+          "label": "Name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "SocialMedia": {
+        "edit": {
+          "label": "SocialMedia",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "SocialMedia",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "Logo": {
+        "edit": {
+          "label": "Logo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Logo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "profile",
+        "Name",
+        "SocialMedia"
+      ],
+      "edit": [
+        [
+          {
+            "name": "profile",
+            "size": 6
+          },
+          {
+            "name": "Name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "SocialMedia",
+            "size": 6
+          },
+          {
+            "name": "Logo",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "card.testimonioal-card",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

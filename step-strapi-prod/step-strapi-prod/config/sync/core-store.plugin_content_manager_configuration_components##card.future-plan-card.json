@@ -1,0 +1,76 @@
+{
+  "key": "plugin_content_manager_configuration_components::card.future-plan-card",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "planTitle",
+      "defaultSortBy": "planTitle",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "planTitle": {
+        "edit": {
+          "label": "planTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "planTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "planDescription": {
+        "edit": {
+          "label": "planDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "planDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "planTitle",
+        "planDescription"
+      ],
+      "edit": [
+        [
+          {
+            "name": "planTitle",
+            "size": 6
+          },
+          {
+            "name": "planDescription",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "card.future-plan-card",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

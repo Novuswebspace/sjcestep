@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_card_footer_cards",
+  "info": {
+    "displayName": "FooterCard"
+  },
+  "options": {},
+  "attributes": {
+    "companyLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "address": {
+      "type": "text"
+    },
+    "copyRight": {
+      "type": "text"
+    }
+  }
+}

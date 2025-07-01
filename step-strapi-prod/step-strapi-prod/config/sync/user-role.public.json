@@ -1,0 +1,127 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::about.about.find"
+    },
+    {
+      "action": "api::article.article.find"
+    },
+    {
+      "action": "api::article.article.findOne"
+    },
+    {
+      "action": "api::contact.contact.create"
+    },
+    {
+      "action": "api::contact.contact.find"
+    },
+    {
+      "action": "api::donation-form.donation-form.create"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::facility-single.facility-single.find"
+    },
+    {
+      "action": "api::facility.facility.find"
+    },
+    {
+      "action": "api::facility.facility.findOne"
+    },
+    {
+      "action": "api::footer.footer.find"
+    },
+    {
+      "action": "api::home.home.find"
+    },
+    {
+      "action": "api::internship-application.internship-application.create"
+    },
+    {
+      "action": "api::internship-application.internship-application.find"
+    },
+    {
+      "action": "api::internship-application.internship-application.findOne"
+    },
+    {
+      "action": "api::internship-course.internship-course.find"
+    },
+    {
+      "action": "api::internship-course.internship-course.findOne"
+    },
+    {
+      "action": "api::internship.internship.find"
+    },
+    {
+      "action": "api::new.new.find"
+    },
+    {
+      "action": "api::new.new.findOne"
+    },
+    {
+      "action": "api::news-blog.news-blog.find"
+    },
+    {
+      "action": "api::past-event.past-event.find"
+    },
+    {
+      "action": "api::past-event.past-event.findOne"
+    },
+    {
+      "action": "api::program-header.program-header.find"
+    },
+    {
+      "action": "api::program.program.find"
+    },
+    {
+      "action": "api::program.program.findOne"
+    },
+    {
+      "action": "api::resource-heading.resource-heading.find"
+    },
+    {
+      "action": "api::resource.resource.find"
+    },
+    {
+      "action": "api::resource.resource.findOne"
+    },
+    {
+      "action": "api::subscribe.subscribe.create"
+    },
+    {
+      "action": "api::upcoming-event.upcoming-event.find"
+    },
+    {
+      "action": "api::upcoming-event.upcoming-event.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_title_marquees",
+  "info": {
+    "displayName": "marquee",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

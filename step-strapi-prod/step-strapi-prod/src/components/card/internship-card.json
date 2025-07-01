@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_card_internship_cards",
+  "info": {
+    "displayName": "InternshipCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "jobName": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "jobDesc": {
+      "type": "text"
+    },
+    "place": {
+      "type": "string",
+      "required": true
+    },
+    "duration": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "vacancy": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

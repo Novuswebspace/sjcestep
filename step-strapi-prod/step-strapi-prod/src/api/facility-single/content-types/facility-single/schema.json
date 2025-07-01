@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "facility_singles",
+  "info": {
+    "singularName": "facility-single",
+    "pluralName": "facility-singles",
+    "displayName": "Facility-single",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "facilitiesFrame": {
+      "type": "string"
+    },
+    "facilitiesTitle": {
+      "type": "string"
+    },
+    "facilitiesDesc": {
+      "type": "text"
+    },
+    "futureFrame": {
+      "type": "string"
+    },
+    "futureTitle": {
+      "type": "string"
+    },
+    "futureDesc": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "FuturePlanCard": {
+      "displayName": "FuturePlanCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "card.future-plan-card"
+    },
+    "journeyTitle": {
+      "type": "string"
+    },
+    "journeyDesc": {
+      "type": "text"
+    }
+  }
+}

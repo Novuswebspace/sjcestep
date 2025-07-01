@@ -1,0 +1,310 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::program-header.program-header",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "heading",
+      "defaultSortBy": "heading",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "heading": {
+        "edit": {
+          "label": "heading",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "heading",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "title": {
+        "edit": {
+          "label": "title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "desc": {
+        "edit": {
+          "label": "desc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "desc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sisfFrame": {
+        "edit": {
+          "label": "sisfFrame",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sisfFrame",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesTitle": {
+        "edit": {
+          "label": "beneficiariesTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "beneficiariesDesc": {
+        "edit": {
+          "label": "beneficiariesDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "beneficiariesDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "Acceleropreneur": {
+        "edit": {
+          "label": "Acceleropreneur",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Acceleropreneur",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "acceleropreneurTitle": {
+        "edit": {
+          "label": "acceleropreneurTitle",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "acceleropreneurTitle",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "acceleropreneurDesc": {
+        "edit": {
+          "label": "acceleropreneurDesc",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "acceleropreneurDesc",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sisfBeneficiariesImage": {
+        "edit": {
+          "label": "sisfBeneficiariesImage",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sisfBeneficiariesImage",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "acceleropreneurImages": {
+        "edit": {
+          "label": "acceleropreneurImages",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "acceleropreneurImages",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "title",
+        "desc",
+        "heading"
+      ],
+      "edit": [
+        [
+          {
+            "name": "title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "desc",
+            "size": 6
+          },
+          {
+            "name": "heading",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "sisfFrame",
+            "size": 6
+          },
+          {
+            "name": "beneficiariesTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "beneficiariesDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "Acceleropreneur",
+            "size": 6
+          },
+          {
+            "name": "acceleropreneurTitle",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "acceleropreneurDesc",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "sisfBeneficiariesImage",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "acceleropreneurImages",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "api::program-header.program-header"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

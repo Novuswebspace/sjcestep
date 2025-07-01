@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_title_achievement_headings",
+  "info": {
+    "displayName": "AchievementHeading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
