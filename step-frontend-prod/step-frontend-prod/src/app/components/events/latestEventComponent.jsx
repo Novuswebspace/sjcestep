@@ -19,6 +19,7 @@ import Loader from "@/components/common/loaders/primaryLoader";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import DataLoader from "../common/loaders/dataLoader";
+import { IoArrowBackOutline } from "react-icons/io5";
 
 const LatestEventComponent = ({ params }) => {
   //Upcoming single event
@@ -87,6 +88,17 @@ const LatestEventComponent = ({ params }) => {
         <DataLoader />
       ) : (
         <section className="px-5 md:px-20">
+          {/* Back to Events Button */}
+          <div className="pt-16 md:pt-24 mb-8">
+            <Link
+              href="/events"
+              className="inline-flex items-center gap-2 text-black hover:text-gray-600 transition-colors duration-300 font-medium"
+            >
+              <IoArrowBackOutline className="text-xl" />
+              Back to Events
+            </Link>
+          </div>
+
           {/* banner */}
           <section className="grid place-items-center">
             <div className="max-w-3xl grid place-items-start md:place-items-center pt-16 md:pt-24">

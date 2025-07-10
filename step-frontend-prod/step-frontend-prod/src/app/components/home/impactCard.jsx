@@ -12,10 +12,10 @@ const ImpactCard = ({ eachImapact, classname = "" }) => {
         className="w-10 h-10"
       />
       <div className="mt-16 flex flex-col justify-start">
-        <p className="font-montserrat uppercase font-extrabold text-lg">
+        <p className="font-montserrat uppercase font-extrabold text-lg whitespace-nowrap">
           {eachImapact.title}
         </p>
-        <p className="text-base text-tertiary-gray mt-2">
+        <p className="text-base text-tertiary-gray mt-2 whitespace-nowrap">
           {eachImapact.description}
         </p>
       </div>

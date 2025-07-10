@@ -7,7 +7,6 @@ import { MdOutlineArrowForward } from "react-icons/md";
 import MilestoneCard from "@/components/about-us/journySlider";
 import PrimaryLayout from "@/components/layouts/primaryLayout";
 import Loader from "../components/common/loaders/primaryLoader";
-import { HoverBorderGradient } from "@/components/common/buttonGradient/buttonGradient";
 import Slider from "react-slick";
 import { settingsImpact } from "../components/home/sliderSettings";
 import axios from "axios";
@@ -112,6 +111,74 @@ const AboutUs = () => {
               </p>
             </div>
 
+            {/* Pyramid structure for Management */}
+            <div className="hidden lg:flex flex-col items-center mt-16">
+              {/* Top: Swamiji */}
+              {imagesData?.managementCard?.[0] && (
+                <motion.div
+                  variants={containerVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={0}
+                  className="flex flex-col items-center"
+                >
+                  <img
+                    src={
+                      imagesData.managementCard[0]?.image?.data?.attributes?.url
+                    }
+                    alt={imagesData.managementCard[0]?.name}
+                    className="object-cover h-72 w-72 mx-auto"
+                  />
+                  <div className="mt-6 text-center">
+                    <p className="font-montserrat uppercase font-extrabold text-xl">
+                      {imagesData.managementCard[0]?.name}
+                    </p>
+                    <p className="text-medium-pink text-lg">
+                      {imagesData.managementCard[0]?.post}
+                    </p>
+                    <p className="text-tertiary-gray text-base mt-4">
+                      {imagesData.managementCard[0]?.designation}
+                    </p>
+                  </div>
+                </motion.div>
+              )}
+              {/* Row below: 2 members */}
+              <div className="flex flex-row justify-center gap-32 mt-12">
+                {[1, 2].map((i) =>
+                  imagesData?.managementCard?.[i] && (
+                    <motion.div
+                      key={i}
+                      variants={containerVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      custom={i}
+                      className="flex flex-col items-center"
+                    >
+                      <img
+                        src={
+                          imagesData.managementCard[i]?.image?.data?.attributes?.url
+                        }
+                        alt={imagesData.managementCard[i]?.name}
+                        className="object-cover h-72 w-72 mx-auto"
+                      />
+                      <div className="mt-6 text-center">
+                        <p className="font-montserrat uppercase font-extrabold text-xl">
+                          {imagesData.managementCard[i]?.name}
+                        </p>
+                        <p className="text-medium-pink text-lg">
+                          {imagesData.managementCard[i]?.post}
+                        </p>
+                        <p className="text-tertiary-gray text-base mt-4">
+                          {imagesData.managementCard[i]?.designation}
+                        </p>
+                      </div>
+                    </motion.div>
+                  )
+                )}
+              </div>
+            </div>
             <ul className="hidden lg:px-16 lg:grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-8 mt-16">
               {imagesData?.managementCard?.slice(0, 3).map((each, index) => (
                 <motion.li
@@ -452,31 +519,19 @@ const AboutUs = () => {
           <section className="px-4 lg:px-20 py-16 md:py-20 mt-16 bg-light-gray-sky flex flex-col lg:items-center">
             <div className="flex flex-col justify-center lg:items-center">
               <p className="font-montserrat uppercase font-black text-4xl">
-                {aboutData?.internshipHeading}
+                Contact Us
               </p>
               <p className="text-tertiary-gray text-lg mt-6 lg:text-center">
-                {aboutData?.internshipDesc}
+                Get in touch with us to learn more about our programs, facilities, and opportunities. We're here to help you succeed.
               </p>
             </div>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-2 mt-7 md:mt-14">
-              <HoverBorderGradient
-                containerClassName="rounded-none"
-                as="div"
-                className="dark:bg-black w-full md:w-auto bg-white text-black dark:text-white flex justify-center items-center"
-              >
-                <button
-                  type="button"
-                  className="font-semibold w-full lg:w-auto bg-white hover:bg-light-gray-sky text-extra-light-dark text-base h-12 px-6"
-                >
-                  Learn more
-                </button>
-              </HoverBorderGradient>
+            <div className="flex justify-center items-center mt-7 md:mt-14">
               <Link
-                href="/internship"
+                href="/contact"
                 type="button"
                 className="bg-black w-full md:w-auto hover:bg-black/[0.8] hover:shadow-lg h-12 px-6 text-white flex justify-center items-center gap-2"
               >
-                Apply <MdOutlineArrowForward />
+                Contact Us <MdOutlineArrowForward />
               </Link>
             </div>
           </section>

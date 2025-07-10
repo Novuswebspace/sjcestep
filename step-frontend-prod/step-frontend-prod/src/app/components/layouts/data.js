@@ -2,15 +2,23 @@
 
 export const menuData = [
   { title: "Home", path: "/" },
-  { title: "About Us", path: "/about-us" },
+  {
+    title: "About",
+    path: "/about-us",
+    submenu: [
+      { title: "JSS MVP", path: "/about-us/jss-mvp" },
+      { title: "SJCE-STEP", path: "/about-us/sjce-step" },
+      { title: "JSS Incubatees", path: "/about-us/jss-incubatees" },
+    ],
+  },
   { title: "Programs", path: "/programs" },
   { title: "Events", path: "/events" },
   {
     title: "Facilities",
     path: "/facilities",
     submenu: [
-      { title: "Step", path: "/facilities" },
-      { title: "Nidhi-Prayas", path: "/facilities/nidhi-prayas" },
+      { title: "NIDHI-PRAYAS Lab", path: "/facilities/nidhi-prayas" },
+      { title: "SJCE-STEP Infra", path: "/facilities/sjce-step-infra" },
     ],
   },
   { title: "Internship", path: "/internship" },
