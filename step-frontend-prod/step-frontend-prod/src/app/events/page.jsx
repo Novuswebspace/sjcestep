@@ -6,6 +6,7 @@
 import React from "react";
 import BlogHeader from "../components/newsBlogs/blogHeader";
 import EventCard from "../components/events/eventCard";
+import FeaturedEventsSlider from "../components/events/featuredEventsSlider";
 import Link from "next/link";
 import PrimaryLayout from "../components/layouts/primaryLayout";
 import axios from "axios";
@@ -24,6 +25,21 @@ const Page = () => {
   const { data: eventHeading } = useQuery({
     queryKey: ["eventHeading"],
     queryFn: fetchEventHeading,
+    staleTime: 10000,
+    refetchOnWindowFocus: false,
+  });
+
+  //Featured events
+  const fetchFeaturedEvents = async () => {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_URL}/upcoming-events?filters[isFeatured][$eq]=true&populate=*`
+    );
+    return data.data;
+  };
+
+  const { data: featuredEvents } = useQuery({
+    queryKey: ["featuredEvents"],
+    queryFn: fetchFeaturedEvents,
     staleTime: 10000,
     refetchOnWindowFocus: false,
   });
@@ -74,61 +90,66 @@ const Page = () => {
       {isLoading ? (
         <DataLoader />
       ) : (
-        <section className="px-4 md:px-20 py-16 md:py-24">
-          <section className="max-w-7xl md:mx-auto flex flex-col">
-            <div>
-              <BlogHeader
-                heading={eventHeading?.upcomingEventTitle}
-                description={eventHeading?.upcomingEventDescription}
-                path="/events/latest"
-              />
+        <>
+          {/* Featured Events Slider */}
+          <FeaturedEventsSlider featuredEvents={featuredEvents} />
 
-              <div className="mt-7 grid md:grid-cols-2 gap-x-7 gap-y-16">
-                {upcominEvents?.map((item) => (
-                  <Link
-                    href={`/events/latest/${item.attributes.slug}`}
-                    key={item.id}
-                  >
-                    <EventCard imageHeight="h-[273px]" item={item} />
-                  </Link>
-                ))}
+          <section className="px-4 md:px-20 py-16 md:py-24">
+            <section className="max-w-7xl md:mx-auto flex flex-col">
+              <div>
+                <BlogHeader
+                  heading={eventHeading?.upcomingEventTitle}
+                  description={eventHeading?.upcomingEventDescription}
+                  path="/events/latest"
+                />
+
+                <div className="mt-7 grid md:grid-cols-2 gap-x-7 gap-y-16">
+                  {upcominEvents?.map((item) => (
+                    <Link
+                      href={`/events/latest/${item.attributes.slug}`}
+                      key={item.id}
+                    >
+                      <EventCard imageHeight="h-[273px]" item={item} />
+                    </Link>
+                  ))}
+                </div>
+                <Link
+                  href="/events/latest"
+                  className="mt-10 text-center bg-black text-white w-full text-sm font-semibold inline-flex items-center justify-center h-12 md:hidden"
+                >
+                  View all posts
+                </Link>
+              </div>
+            </section>
+
+            <section className="max-w-7xl mt-20 md:mt-32 md:mx-auto flex flex-col">
+              <div>
+                <BlogHeader
+                  heading={eventHeading?.pastEventTitle}
+                  description={eventHeading?.pastEventDescription}
+                  path="/events/past"
+                />
+
+                <div className="mt-7 grid md:grid-cols-2 gap-x-7 gap-y-16">
+                  {pastEvents?.map((item) => (
+                    <Link
+                      href={`/events/past/${item.attributes.slug}`}
+                      key={item.id}
+                    >
+                      <EventCard imageHeight="h-[273px]" item={item} />
+                    </Link>
+                  ))}
+                </div>
               </div>
               <Link
-                href="/events/latest"
+                href="/events/past"
                 className="mt-10 text-center bg-black text-white w-full text-sm font-semibold inline-flex items-center justify-center h-12 md:hidden"
               >
                 View all posts
               </Link>
-            </div>
+            </section>
           </section>
-
-          <section className="max-w-7xl mt-20 md:mt-32 md:mx-auto flex flex-col">
-            <div>
-              <BlogHeader
-                heading={eventHeading?.pastEventTitle}
-                description={eventHeading?.pastEventDescription}
-                path="/events/past"
-              />
-
-              <div className="mt-7 grid md:grid-cols-2 gap-x-7 gap-y-16">
-                {pastEvents?.map((item) => (
-                  <Link
-                    href={`/events/past/${item.attributes.slug}`}
-                    key={item.id}
-                  >
-                    <EventCard imageHeight="h-[273px]" item={item} />
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <Link
-              href="/events/past"
-              className="mt-10 text-center bg-black text-white w-full text-sm font-semibold inline-flex items-center justify-center h-12 md:hidden"
-            >
-              View all posts
-            </Link>
-          </section>
-        </section>
+        </>
       )}
     </PrimaryLayout>
   );

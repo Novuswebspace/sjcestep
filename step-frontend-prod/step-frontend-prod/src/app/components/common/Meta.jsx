@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { siteName } from "../../../../site-config";
 
 const Meta = ({
   title,
@@ -15,7 +16,7 @@ const Meta = ({
 }) => {
   return (
     <>
-      <title>{title}</title>
+      <title>{title} | {siteName}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       {/* Open Graph Meta Tags */}
