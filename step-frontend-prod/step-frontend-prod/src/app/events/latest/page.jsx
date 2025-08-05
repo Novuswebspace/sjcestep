@@ -10,6 +10,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Link from "next/link";
 import EventCard from "@/components/events/eventCard";
+import FeaturedEventsSlider from "@/components/events/featuredEventsSlider";
 import ReactPaginate from "react-paginate";
 import { IoArrowBackOutline } from "react-icons/io5";
 import Loader from "@/components/common/loaders/primaryLoader";
@@ -33,6 +34,21 @@ const Page = () => {
   const { data: eventHeading } = useQuery({
     queryKey: ["eventHeading-latest-pagination"],
     queryFn: fetchEventHeading,
+    staleTime: 10000,
+    refetchOnWindowFocus: false,
+  });
+
+  //Featured events
+  const fetchFeaturedEvents = async () => {
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_URL}/upcoming-events?filters[isFeatured][$eq]=true&populate=*`
+    );
+    return data.data;
+  };
+
+  const { data: featuredEvents } = useQuery({
+    queryKey: ["featuredEvents-latest"],
+    queryFn: fetchFeaturedEvents,
     staleTime: 10000,
     refetchOnWindowFocus: false,
   });
@@ -80,56 +96,61 @@ const Page = () => {
       {isLoading ? (
         <DataLoader />
       ) : (
-        <section className="px-4 md:px-20">
-          <section className="max-w-7xl md:mx-auto py-16 md:py-24">
-            <div ref={headingRef} className="md:text-center">
-              <BlogHeader
-                heading={eventHeading?.upcomingEventTitle}
-                description={eventHeading?.upcomingEventDescription}
-              />
-            </div>
+        <>
+          {/* Featured Events Slider */}
+          <FeaturedEventsSlider featuredEvents={featuredEvents} />
 
-            <div className="mt-16 border-b-1.5 pb-16 grid md:grid-cols-2 gap-x-7 gap-y-16">
-              {upcomingEvents?.map((item) => (
-                <Link
-                  href={`/events/latest/${item.attributes.slug}`}
-                  key={item.id}
-                >
-                  <EventCard imageHeight="h-[273px]" item={item} />
-                </Link>
-              ))}
-            </div>
+          <section className="px-4 md:px-20">
+            <section className="max-w-7xl md:mx-auto py-16 md:py-24">
+              <div ref={headingRef} className="md:text-center">
+                <BlogHeader
+                  heading={eventHeading?.upcomingEventTitle}
+                  description={eventHeading?.upcomingEventDescription}
+                />
+              </div>
 
-            <div className="mt-5">
-              <ReactPaginate
-                pageCount={pagesData?.pageCount}
-                pageRangeDisplayed={3}
-                marginPagesDisplayed={2}
-                previousLabel={
-                  <IoArrowBackOutline className="text-[20px]" color="#475467" />
-                }
-                nextLabel={
-                  <IoArrowBackOutline
-                    className="text-[18px] -rotate-180"
-                    color="#475467"
-                  />
-                }
-                onPageChange={handlePageClick}
-                containerClassName="pagination"
-                pageClassName="pagination-item"
-                activeClassName="active"
-                previousClassName="pagination-previous"
-                nextClassName="pagination-next"
-                disabledClassName="pagination-disabled"
-                breakClassName="pagination-break"
+              <div className="mt-16 border-b-1.5 pb-16 grid md:grid-cols-2 gap-x-7 gap-y-16">
+                {upcomingEvents?.map((item) => (
+                  <Link
+                    href={`/events/latest/${item.attributes.slug}`}
+                    key={item.id}
+                  >
+                    <EventCard imageHeight="h-[273px]" item={item} />
+                  </Link>
+                ))}
+              </div>
+
+              <div className="mt-5">
+                <ReactPaginate
+                  pageCount={pagesData?.pageCount}
+                  pageRangeDisplayed={3}
+                  marginPagesDisplayed={2}
+                  previousLabel={
+                    <IoArrowBackOutline className="text-[20px]" color="#475467" />
+                  }
+                  nextLabel={
+                    <IoArrowBackOutline
+                      className="text-[18px] -rotate-180"
+                      color="#475467"
+                    />
+                  }
+                  onPageChange={handlePageClick}
+                  containerClassName="pagination"
+                  pageClassName="pagination-item"
+                  activeClassName="active"
+                  previousClassName="pagination-previous"
+                  nextClassName="pagination-next"
+                  disabledClassName="pagination-disabled"
+                  breakClassName="pagination-break"
                 // InitialPage={currentPage - 1}
-              />
-            </div>
+                />
+                          </div>
           </section>
         </section>
+        </>
       )}
     </PrimaryLayout>
   );
 };
 
-export default Page;
+      export default Page;
