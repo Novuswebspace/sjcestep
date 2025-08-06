@@ -58,7 +58,7 @@ const NidhiPrayas = () => {
                 <p className="font-medium px-3 py-1 text-sm bg-light-gray-sky border w-fit border-lightish-gray">
                   {nidhiPrayasData?.nidhiprayasFrame}
                 </p>
-                <p className="font-montserrat font-black uppercase text-4xl mt-3">
+                <p className="font-montserrat font-black text-gradient uppercase text-4xl mt-3">
                   {nidhiPrayasData?.nidhiprayasTitle}
                 </p>
               </div>
@@ -135,35 +135,38 @@ const NidhiPrayas = () => {
                 )}
               </section>
 
-              <section className=" max-w-3xl md:mx-auto ">
-                <p className=" text-2xl text-black">
-                  <strong>Contact Us </strong>
-                </p>
-                <p className=" mt-5 text-xl text-tertiary-gray">
-                  Reach out to us for more information or to schedule a visit:
-                </p>
-                <ul className=" mt-5 text-xl list-disc text-tertiary-gray pl-8">
-                  <li className="mb-1">
-                    <strong className="text-black">Email: </strong>
-                    <a href={`mailto:${nidhiPrayasData?.contact.email}`}>
-                      {nidhiPrayasData?.contact.email}
-                    </a>
+              <section className="max-w-3xl md:mx-auto rounded-2xl p-8 bg-gradient-to-br from-white via-slate-100 to-blue-50 border border-lightish-gray shadow-lg flex flex-col gap-6">
+                <h2 className="text-3xl font-bold text-primary-dark-blue mb-2 flex items-center gap-2">
+                  Contact Us
+                </h2>
+                <ul className="flex flex-col gap-4 text-lg">
+                  <li className="flex items-center gap-4 bg-white/70 rounded-lg p-4 shadow-sm">
+                    <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" alt="email" className="w-7 h-7" />
+                    <div>
+                      <span className="font-semibold text-black">Email: </span>
+                      <a href={`mailto:${nidhiPrayasData?.contact.email}`} className="hover:underline text-blue-700">{nidhiPrayasData?.contact.email}</a>
+                    </div>
                   </li>
-                  <li className="mb-1">
-                    <strong className="text-black">Phone: </strong>{" "}
-                    <a href={`tel:${nidhiPrayasData?.contact.phoneNumber1}`}>
-                      {nidhiPrayasData?.contact.phoneNumber1}
-                    </a>{" "}
-                    /
-                    <a href={`tel:${nidhiPrayasData?.contact.phoneNumber2}`}>
-                      {nidhiPrayasData?.contact.phoneNumber2}
-                    </a>
+                  <li className="flex items-center gap-4 bg-white/70 rounded-lg p-4 shadow-sm">
+                    <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000" alt="phone" className="w-7 h-7" />
+                    <div>
+                      <span className="font-semibold text-black">Phone: </span>
+                      <a href={`tel:${nidhiPrayasData?.contact.phoneNumber1}`} className="hover:underline text-blue-700">{nidhiPrayasData?.contact.phoneNumber1}</a>
+                      <span className="mx-1 text-gray-400">/</span>
+                      <a href={`tel:${nidhiPrayasData?.contact.phoneNumber2}`} className="hover:underline text-blue-700">{nidhiPrayasData?.contact.phoneNumber2}</a>
+                    </div>
                   </li>
-                  <li className="mb-1">
-                    <strong className="text-black">Address: </strong>
-                    {nidhiPrayasData?.contact.Address}
+                  <li className="flex items-center gap-4 bg-white/70 rounded-lg p-4 shadow-sm">
+                    <img src="https://img.icons8.com/?size=100&id=53430&format=png&color=000000" alt="address" className="w-7 h-7" />
+                    <div>
+                      <span className="font-semibold text-black">Address: </span>
+                      <span className="text-gray-700">{nidhiPrayasData?.contact.Address}</span>
+                    </div>
                   </li>
                 </ul>
+                <p className="text-lg text-tertiary-gray mt-2 text-center">
+                  Reach out to us for more information or to schedule a visit.
+                </p>
               </section>
             </section>
           </section>
