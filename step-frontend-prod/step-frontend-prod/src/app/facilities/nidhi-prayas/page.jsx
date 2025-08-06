@@ -135,11 +135,12 @@ const NidhiPrayas = () => {
                 )}
               </section>
 
-              <section className="max-w-3xl md:mx-auto rounded-2xl p-8 bg-gradient-to-br from-white via-slate-100 to-blue-50 border border-lightish-gray shadow-lg flex flex-col gap-6">
-                <h2 className="text-3xl font-bold text-primary-dark-blue mb-2 flex items-center gap-2">
+              <section className=" md:max-w-5xl md:mx-auto rounded-2xl p-8 bg-gradient-to-br from-white via-slate-100 to-blue-50 border border-lightish-gray shadow-lg flex flex-col gap-6">
+                <h2 className=" text-2xl md:text-3xl font-bold text-primary-dark-blue mb-2 flex items-center gap-2">
                   Contact Us
                 </h2>
-                <ul className="flex flex-col gap-4 text-lg">
+                <div className=" flex md:flex-row flex-col gap-3 w-full mt-3 md:mt-4 p-1 md:p-3 items-center ">
+                <ul className="flex flex-col gap-4 w-[80vw] text-md md:text-lg">
                   <li className="flex items-center gap-4 bg-white/70 rounded-lg p-4 shadow-sm">
                     <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" alt="email" className="w-7 h-7" />
                     <div>
@@ -164,7 +165,11 @@ const NidhiPrayas = () => {
                     </div>
                   </li>
                 </ul>
-                <p className="text-lg text-tertiary-gray mt-2 text-center">
+                <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.809767673269!2d76.610438515146!3d12.316143523363506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7b67b7b7609b%3A0xb265f428562cf9ef!2sSJCE-STEP!5e0!3m2!1sen!2sin!4v1754489415340!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className="w-full h-full md:w-[20vw] md:h-[20vw] rounded-lg"></iframe>
+                </div>
+                </div>
+                <p className=" text-md md:text-lg text-tertiary-gray mt-2 text-center">
                   Reach out to us for more information or to schedule a visit.
                 </p>
               </section>
