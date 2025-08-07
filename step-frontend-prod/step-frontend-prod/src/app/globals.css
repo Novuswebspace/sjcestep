@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
 
 .text-gradient {
   background-image: linear-gradient(to right, #8B5EF2 0%, #6663F5 100%);
