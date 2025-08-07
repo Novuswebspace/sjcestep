@@ -92,8 +92,8 @@ const Page = () => {
       ) : (
         <>
           {/* Featured Events Slider */}
-          <FeaturedEventsSlider featuredEvents={featuredEvents} />
-
+          <FeaturedEventsSlider />
+          
           <section className="px-4 md:px-20 py-16 md:py-24">
             <section className="max-w-7xl md:mx-auto flex flex-col">
               <div>
@@ -122,7 +122,7 @@ const Page = () => {
               </div>
             </section>
 
-            <section className="max-w-7xl mt-20 md:mt-32 md:mx-auto flex flex-col">
+            <section className="max-w-7xl p-3 mt-20 md:mt-32 md:mx-auto flex flex-col">
               <div>
                 <BlogHeader
                   heading={eventHeading?.pastEventTitle}
