@@ -78,7 +78,7 @@ const NidhiPrayas = () => {
                           switch (level) {
                             case 1:
                               return (
-                                <h1 className="text-5xl  leading-[3.7rem]">
+                                <h1 className="text-5xl leading-[3.7rem]">
                                   {children}
                                 </h1>
                               );
@@ -93,31 +93,39 @@ const NidhiPrayas = () => {
                                 <h3 className="text-[32px]">{children}</h3>
                               );
                             case 4:
-                              return <h4 className="text-2xl">{children}</h4>;
+                              return (
+                              <h4 className="text-2xl font-montserrat mt-4 text-center underline underline-offset-4 decoration-slate-400 ">{children}</h4>
+                              );
                             case 5:
                               return (
-                                <h5 className="text-xl text-center">
+                                <div className="bg-slate-100 flex border-2 justify-center items-center mt-4 p-4 rounded-t-xl ">
+                                <h5 className="text-md text-slate-900 text-center">
                                   {children}
                                 </h5>
+                                </div>
                               );
                             case 6:
                               return (
-                                <h6 className="text-[18px] text-center  text-tertiary-gray">
+                                <div className="bg-slate-100 border-2 rounded-b-xl mt-0 p-3">
+                                <h6 className="text-sm text-center  text-tertiary-gray">
                                   {children}
                                 </h6>
+                                </div>
                               );
                             default:
                               return <h4 className="text-2xl">{children}</h4>;
                           }
                         },
                         image: ({ image }) => (
+                          <div className="w-full border-2 rounded-b-xl">
                           <img
                             src={image?.url}
                             alt={image?.alternativeText || image?.name}
                             width={image?.width || 500}
                             height={image?.height || 300}
-                            className="mx-auto my-4 max-w-full"
+                            className="mx-auto border-2 my-4 max-w-full"
                           />
+                          </div>
                         ),
                         link: ({ children, url }) => (
                           <a

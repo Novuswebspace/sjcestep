@@ -98,7 +98,7 @@ export default function ContactForm() {
                   className="h-5 w-5 hidden lg:block cursor-pointer absolute right-10 top-10"
                 />
                 <p className="text-3xl lg:text-4xl font-black font-montserrat uppercase mt-4">
-                  Conatct Form
+                  Contact Form
                 </p>
                 <p className="text-lg lg:text-xl font-normal text-tertiary-gray mt-5">
                   Our friendly team would love to hear from you.
