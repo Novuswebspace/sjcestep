@@ -49,7 +49,7 @@ export const advisorsData = [
     name: "Sudhanva Dhananjaya",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/sudhanva-dhananjaya.png",
-    company:"ABC company",
+    company: "ABC company",
   },
   {
     name: "Nanjunda Palecanda P",

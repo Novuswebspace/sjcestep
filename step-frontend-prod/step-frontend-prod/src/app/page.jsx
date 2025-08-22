@@ -41,51 +41,56 @@ const Home = () => {
       badge: "FOR WOMEN",
       badgeColor: "bg-purple-600",
       title: "MSME Idea Hackathon 3.0",
-      description: "A business accelerator program for promoting startups. Startups/MSMEs get mentorship, funding, market assistance and advisors including skill aspects of business.",
+      description:
+        "A business accelerator program for promoting startups. Startups/MSMEs get mentorship, funding, market assistance and advisors including skill aspects of business.",
       imageText: "MSME Hackathon",
       imageColor: "bg-purple-600",
-      link: "/programs/msme-hackathon"
+      link: "/programs/msme-hackathon",
     },
     {
       id: 2,
       badge: "TECH FOCUS",
       badgeColor: "bg-blue-600",
       title: "AI/ML Innovation Lab",
-      description: "Advanced artificial intelligence and machine learning program for tech enthusiasts. Participants get hands-on experience with cutting-edge AI technologies and real-world projects.",
+      description:
+        "Advanced artificial intelligence and machine learning program for tech enthusiasts. Participants get hands-on experience with cutting-edge AI technologies and real-world projects.",
       imageText: "AI/ML Lab",
       imageColor: "bg-blue-600",
-      link: "/programs/ai-ml-lab"
+      link: "/programs/ai-ml-lab",
     },
     {
       id: 3,
       badge: "STARTUP",
       badgeColor: "bg-green-600",
       title: "Startup Accelerator Program",
-      description: "Comprehensive startup development program offering mentorship, funding opportunities, market access, and networking with industry experts and investors.",
+      description:
+        "Comprehensive startup development program offering mentorship, funding opportunities, market access, and networking with industry experts and investors.",
       imageText: "Accelerator",
       imageColor: "bg-green-600",
-      link: "/programs/startup-accelerator"
+      link: "/programs/startup-accelerator",
     },
     {
       id: 4,
       badge: "INNOVATION",
       badgeColor: "bg-orange-600",
       title: "Digital Innovation Hub",
-      description: "A collaborative space for digital innovation and technology development. Focus on emerging technologies like IoT, Blockchain, and Cloud Computing.",
+      description:
+        "A collaborative space for digital innovation and technology development. Focus on emerging technologies like IoT, Blockchain, and Cloud Computing.",
       imageText: "Digital Hub",
       imageColor: "bg-orange-600",
-      link: "/programs/digital-innovation"
+      link: "/programs/digital-innovation",
     },
     {
       id: 5,
       badge: "RESEARCH",
       badgeColor: "bg-indigo-600",
       title: "Research & Development Center",
-      description: "State-of-the-art R&D facility supporting research projects, patent development, and commercialization of innovative technologies.",
+      description:
+        "State-of-the-art R&D facility supporting research projects, patent development, and commercialization of innovative technologies.",
       imageText: "R&D Center",
       imageColor: "bg-indigo-600",
-      link: "/programs/research-development"
-    }
+      link: "/programs/research-development",
+    },
   ];
 
   // Upcoming Programs Data
@@ -93,45 +98,50 @@ const Home = () => {
     {
       id: 1,
       title: "Tech Innovation Challenge",
-      description: "A competitive platform for tech innovators to showcase their solutions",
+      description:
+        "A competitive platform for tech innovators to showcase their solutions",
       date: "Dec 15, 2024",
-      link: "/programs/tech-innovation-challenge"
+      link: "/programs/tech-innovation-challenge",
     },
     {
       id: 2,
       title: "Women Entrepreneur Workshop",
-      description: "Empowering women entrepreneurs with skills and networking opportunities",
+      description:
+        "Empowering women entrepreneurs with skills and networking opportunities",
       date: "Dec 20, 2024",
-      link: "/programs/women-entrepreneur-workshop"
+      link: "/programs/women-entrepreneur-workshop",
     },
     {
       id: 3,
       title: "Startup Pitch Competition",
-      description: "Platform for startups to pitch their ideas to investors and mentors",
+      description:
+        "Platform for startups to pitch their ideas to investors and mentors",
       date: "Jan 10, 2025",
-      link: "/programs/startup-pitch-competition"
+      link: "/programs/startup-pitch-competition",
     },
     {
       id: 4,
       title: "AI/ML Bootcamp",
-      description: "Intensive training program on artificial intelligence and machine learning",
+      description:
+        "Intensive training program on artificial intelligence and machine learning",
       date: "Jan 15, 2025",
-      link: "/programs/ai-ml-bootcamp"
+      link: "/programs/ai-ml-bootcamp",
     },
     {
       id: 5,
       title: "Digital Marketing Masterclass",
       description: "Learn digital marketing strategies for business growth",
       date: "Jan 25, 2025",
-      link: "/programs/digital-marketing-masterclass"
+      link: "/programs/digital-marketing-masterclass",
     },
     {
       id: 6,
       title: "Blockchain Development Workshop",
-      description: "Hands-on workshop on blockchain technology and applications",
+      description:
+        "Hands-on workshop on blockchain technology and applications",
       date: "Feb 5, 2025",
-      link: "/programs/blockchain-workshop"
-    }
+      link: "/programs/blockchain-workshop",
+    },
   ];
 
   // Our Incubatees Data
@@ -142,7 +152,7 @@ const Home = () => {
       industry: "Technology",
       description: "AI-powered solutions for business automation",
       logo: "/images/incubatees/innovatelab.png",
-      link: "/incubatees/innovatelab"
+      link: "/incubatees/innovatelab",
     },
     {
       id: 2,
@@ -150,7 +160,7 @@ const Home = () => {
       industry: "Healthcare",
       description: "Digital health monitoring and telemedicine platform",
       logo: "/images/incubatees/meracal.png",
-      link: "/incubatees/meracal"
+      link: "/incubatees/meracal",
     },
     {
       id: 3,
@@ -158,7 +168,7 @@ const Home = () => {
       industry: "E-commerce",
       description: "Sustainable fashion marketplace",
       logo: "/images/incubatees/lama.png",
-      link: "/incubatees/lama"
+      link: "/incubatees/lama",
     },
     {
       id: 4,
@@ -166,7 +176,7 @@ const Home = () => {
       industry: "Agriculture",
       description: "Smart farming solutions and crop management",
       logo: "/images/incubatees/agropak.png",
-      link: "/incubatees/agropak"
+      link: "/incubatees/agropak",
     },
     {
       id: 5,
@@ -174,7 +184,7 @@ const Home = () => {
       industry: "Education",
       description: "Online learning platform for skill development",
       logo: "/images/incubatees/everest.png",
-      link: "/incubatees/everest"
+      link: "/incubatees/everest",
     },
     {
       id: 6,
@@ -182,7 +192,7 @@ const Home = () => {
       industry: "Fintech",
       description: "Digital payment and financial services",
       logo: "/images/incubatees/techcorp.png",
-      link: "/incubatees/techcorp"
+      link: "/incubatees/techcorp",
     },
     {
       id: 7,
@@ -190,7 +200,7 @@ const Home = () => {
       industry: "Clean Energy",
       description: "Renewable energy solutions and sustainability",
       logo: "/images/incubatees/innov.png",
-      link: "/incubatees/innov"
+      link: "/incubatees/innov",
     },
     {
       id: 8,
@@ -198,8 +208,8 @@ const Home = () => {
       industry: "Data Analytics",
       description: "Big data analytics and business intelligence",
       logo: "/images/incubatees/dataflow.png",
-      link: "/incubatees/dataflow"
-    }
+      link: "/incubatees/dataflow",
+    },
   ];
 
   const resetPopup = () => {
@@ -334,8 +344,6 @@ const Home = () => {
     refetchOnWindowFocus: false,
   });
 
-
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: (index) => ({
@@ -362,7 +370,9 @@ const Home = () => {
     <>
       <PopupModal isOpen={showPopup} onClose={() => setShowPopup(false)}>
         <div className="max-w-lg">
-          <h2 className="text-2xl font-bold mb-4 text-center">Upcoming Events</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">
+            Upcoming Events
+          </h2>
           {upcomingEvents && upcomingEvents.length > 0 ? (
             <div className="space-y-4">
               {upcomingEvents.map((event) => (
@@ -466,8 +476,9 @@ const Home = () => {
                 {homeData?.marquee?.map((word, index) => (
                   <p
                     key={index}
-                    className={`font-montserrat uppercase font-black text-gradient text-4xl md:text-6xl mt-2 md:mt-4 animatedWord ${index === currentIndex ? "animate" : "hidden"
-                      }`}
+                    className={`font-montserrat uppercase font-black text-gradient text-4xl md:text-6xl mt-2 md:mt-4 animatedWord ${
+                      index === currentIndex ? "animate" : "hidden"
+                    }`}
                   >
                     {word?.title}
                   </p>
@@ -510,139 +521,213 @@ const Home = () => {
               <div className="mx-auto mt-16 w-full md:px-20 bg-white">
                 {/* Featured Programs Section */}
                 <div className="mb-16">
-                  <h2 className="text-3xl font-bold text-center mb-8 text-white">Featured Programs</h2>
-                  
+                  <h2 className="text-3xl font-bold text-center mb-8 text-white">
+                    Featured Programs
+                  </h2>
+
                   {/* Featured Programs Slider */}
                   <div className="relative">
-                                         <div className="overflow-hidden">
-                       <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${sliderIndex * 100}%)` }}>
-                         {featuredPrograms.map((program) => (
-                           <div key={program.id} className="w-full flex-shrink-0">
-                             <div className="bg-gray-100 rounded-lg p-8 flex flex-col lg:flex-row gap-8">
-                               <div className="flex-1">
-                                 <div className={`inline-block ${program.badgeColor} text-white px-4 py-1 rounded-full text-sm mb-4`}>
-                                   {program.badge}
-                                 </div>
-                                 <h3 className="text-2xl font-bold text-slate-700 mb-4">{program.title}</h3>
-                                 <p className="text-gray-700 mb-6">
-                                   {program.description}
-                                 </p>
-                                 <Link href={program.link}>
-                                   <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-6 py-3 rounded hover:opacity-90 transition-opacity">
-                                     Learn More
-                                   </button>
-                                 </Link>
-                               </div>
-                               <div className="flex-1">
-                                 <div className={`${program.imageColor} rounded-lg h-48 flex items-center justify-center`}>
-                                   <span className="text-white text-xl font-semibold">{program.imageText}</span>
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                         ))}
-                       </div>
-                     </div>
+                    <div className="overflow-hidden">
+                      <div
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{
+                          transform: `translateX(-${sliderIndex * 100}%)`,
+                        }}
+                      >
+                        {featuredPrograms.map((program) => (
+                          <div
+                            key={program.id}
+                            className="w-full flex-shrink-0"
+                          >
+                            <div className="bg-gray-100 rounded-lg p-8 flex flex-col lg:flex-row gap-8">
+                              <div className="flex-1">
+                                <div
+                                  className={`inline-block ${program.badgeColor} text-white px-4 py-1 rounded-full text-sm mb-4`}
+                                >
+                                  {program.badge}
+                                </div>
+                                <h3 className="text-2xl font-bold text-slate-700 mb-4">
+                                  {program.title}
+                                </h3>
+                                <p className="text-gray-700 mb-6">
+                                  {program.description}
+                                </p>
+                                <Link href={program.link}>
+                                  <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-6 py-3 rounded hover:opacity-90 transition-opacity">
+                                    Learn More
+                                  </button>
+                                </Link>
+                              </div>
+                              <div className="flex-1">
+                                <div
+                                  className={`${program.imageColor} rounded-lg h-48 flex items-center justify-center`}
+                                >
+                                  <span className="text-white text-xl font-semibold">
+                                    {program.imageText}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-                                         {/* Navigation Controls */}
-                     <div className="flex justify-center items-center gap-4 mt-6">
-                       <button 
-                         onClick={() => setSliderIndex((prev) => prev === 0 ? featuredPrograms.length - 1 : prev - 1)}
-                         className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
-                       >
-                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                         </svg>
-                       </button>
-                       <div className="flex gap-2">
-                         {featuredPrograms.map((_, index) => (
-                           <div 
-                             key={index}
-                             className={`w-3 h-3 rounded-full ${sliderIndex === index ? 'bg-blue-500' : 'bg-gray-600 border border-gray-500'}`}
-                           ></div>
-                         ))}
-                       </div>
-                       <button 
-                         onClick={() => setSliderIndex((prev) => prev === featuredPrograms.length - 1 ? 0 : prev + 1)}
-                         className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
-                       >
-                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                         </svg>
-                       </button>
-                     </div>
+                    {/* Navigation Controls */}
+                    <div className="flex justify-center items-center gap-4 mt-6">
+                      <button
+                        onClick={() =>
+                          setSliderIndex((prev) =>
+                            prev === 0 ? featuredPrograms.length - 1 : prev - 1
+                          )
+                        }
+                        className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
+                      >
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 19l-7-7 7-7"
+                          />
+                        </svg>
+                      </button>
+                      <div className="flex gap-2">
+                        {featuredPrograms.map((_, index) => (
+                          <div
+                            key={index}
+                            className={`w-3 h-3 rounded-full ${sliderIndex === index ? "bg-blue-500" : "bg-gray-600 border border-gray-500"}`}
+                          ></div>
+                        ))}
+                      </div>
+                      <button
+                        onClick={() =>
+                          setSliderIndex((prev) =>
+                            prev === featuredPrograms.length - 1 ? 0 : prev + 1
+                          )
+                        }
+                        className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
+                      >
+                        <svg
+                          className="w-5 h-5 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 {/* Upcoming Programs Section */}
                 <div className="mb-16">
-                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-700">Upcoming Programs</h2>
+                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-700">
+                    Upcoming Programs
+                  </h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                                         {upcomingPrograms.map((program) => (
-                       <Link key={program.id} href={program.link}>
-                         <div className="bg-gray-100 border-2 border-slate-300 rounded-lg p-6 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                           <h3 className="text-slate-800 font-semibold">{program.title}</h3>
-                           <p className="text-tertiary-gray text-sm mt-2">{program.date}</p>
-                         </div>
-                       </Link>
-                     ))}
+                    {upcomingPrograms.map((program) => (
+                      <Link key={program.id} href={program.link}>
+                        <div className="bg-gray-100 border-2 border-slate-300 rounded-lg p-6 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                          <h3 className="text-slate-800 font-semibold">
+                            {program.title}
+                          </h3>
+                          <p className="text-tertiary-gray text-sm mt-2">
+                            {program.date}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
 
-                                 {/* Our Incubatees Section */}
-                 <div className="mb-16">
-                   <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">Our Incubatees</h2>
-                   
-                   {/* First Row - Slides Left to Right */}
-                   <div className="overflow-hidden mb-4">
-                     <div className="flex animate-marquee-left">
-                       {incubatees.slice(0, 4).map((incubatee) => (
-                         <div key={incubatee.id} className="flex-shrink-0 w-1/4 px-2">
-                           <Link href={incubatee.link}>
-                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
-                             </div>
-                           </Link>
-                         </div>
-                       ))}
-                       {/* Duplicate for seamless loop */}
-                       {incubatees.slice(0, 4).map((incubatee) => (
-                         <div key={`${incubatee.id}-duplicate`} className="flex-shrink-0 w-1/4 px-2">
-                           <Link href={incubatee.link}>
-                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
-                             </div>
-                           </Link>
-                         </div>
-                       ))}
-                     </div>
-                   </div>
-                   
-                   {/* Second Row - Slides Right to Left */}
-                   <div className="overflow-hidden">
-                     <div className="flex animate-marquee-right">
-                       {incubatees.slice(4, 8).map((incubatee) => (
-                         <div key={incubatee.id} className="flex-shrink-0 w-1/4 px-2">
-                           <Link href={incubatee.link}>
-                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
-                             </div>
-                           </Link>
-                         </div>
-                       ))}
-                       {/* Duplicate for seamless loop */}
-                       {incubatees.slice(4, 8).map((incubatee) => (
-                         <div key={`${incubatee.id}-duplicate`} className="flex-shrink-0 w-1/4 px-2">
-                           <Link href={incubatee.link}>
-                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
-                             </div>
-                           </Link>
-                         </div>
-                       ))}
-                     </div>
-                   </div>
-                 </div>
+                {/* Our Incubatees Section */}
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">
+                    Our Incubatees
+                  </h2>
+
+                  {/* First Row - Slides Left to Right */}
+                  <div className="overflow-hidden mb-4">
+                    <div className="flex animate-marquee-left">
+                      {incubatees.slice(0, 4).map((incubatee) => (
+                        <div
+                          key={incubatee.id}
+                          className="flex-shrink-0 w-1/4 px-2"
+                        >
+                          <Link href={incubatee.link}>
+                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                              <h3 className="text-slate-800 font-semibold text-sm">
+                                {incubatee.name}
+                              </h3>
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                      {/* Duplicate for seamless loop */}
+                      {incubatees.slice(0, 4).map((incubatee) => (
+                        <div
+                          key={`${incubatee.id}-duplicate`}
+                          className="flex-shrink-0 w-1/4 px-2"
+                        >
+                          <Link href={incubatee.link}>
+                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                              <h3 className="text-slate-800 font-semibold text-sm">
+                                {incubatee.name}
+                              </h3>
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Second Row - Slides Right to Left */}
+                  <div className="overflow-hidden">
+                    <div className="flex animate-marquee-right">
+                      {incubatees.slice(4, 8).map((incubatee) => (
+                        <div
+                          key={incubatee.id}
+                          className="flex-shrink-0 w-1/4 px-2"
+                        >
+                          <Link href={incubatee.link}>
+                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                              <h3 className="text-slate-800 font-semibold text-sm">
+                                {incubatee.name}
+                              </h3>
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                      {/* Duplicate for seamless loop */}
+                      {incubatees.slice(4, 8).map((incubatee) => (
+                        <div
+                          key={`${incubatee.id}-duplicate`}
+                          className="flex-shrink-0 w-1/4 px-2"
+                        >
+                          <Link href={incubatee.link}>
+                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                              <h3 className="text-slate-800 font-semibold text-sm">
+                                {incubatee.name}
+                              </h3>
+                            </div>
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             {/* Hero Banner Section end*/}

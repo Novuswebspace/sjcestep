@@ -9,7 +9,7 @@
 import Loader from "@/app/components/common/loaders/primaryLoader";
 import PrimaryLayout from "@/components/layouts/primaryLayout";
 import { useQuery } from "@tanstack/react-query";
-import DataLoader from "@/app/components/common/loaders/dataLoader";
+// Removed unused DataLoader import
 import axios from "axios";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Meta from "@/app/components/common/Meta";
@@ -60,21 +60,29 @@ const NidhiPrayas = () => {
   ];
 
   // Core objectives (fallbacks included)
-  const coreObjectives =
-    nidhiPrayasData?.coreObjectives || [
-      "Enable the translation of innovative ideas into tangible prototypes.",
-      "Provide a platform for rapid experimentation and iteration on the path from idea to market.",
-      "Generate novel solutions to pressing local and global challenges.",
-      "Attract and empower a new generation of youth with problem-solving zeal.",
-      "Serve as a pre-incubation pipeline to foster venture creation and long-term success.",
-    ];
+  const coreObjectives = nidhiPrayasData?.coreObjectives || [
+    "Enable the translation of innovative ideas into tangible prototypes.",
+    "Provide a platform for rapid experimentation and iteration on the path from idea to market.",
+    "Generate novel solutions to pressing local and global challenges.",
+    "Attract and empower a new generation of youth with problem-solving zeal.",
+    "Serve as a pre-incubation pipeline to foster venture creation and long-term success.",
+  ];
 
   return (
     <PrimaryLayout>
       <Meta
-        title={nidhiPrayasData?.metaTitle || "NIDHI PRAYAS: Everything you wanted to know about our facilities"}
-        description={nidhiPrayasData?.metaDescription || "Discover our state-of-the-art facilities designed to enhance your experience."}
-        keywords={nidhiPrayasData?.metaKeywords || "facilities, amenities, state-of-the-art, experience"}
+        title={
+          nidhiPrayasData?.metaTitle ||
+          "NIDHI PRAYAS: Everything you wanted to know about our facilities"
+        }
+        description={
+          nidhiPrayasData?.metaDescription ||
+          "Discover our state-of-the-art facilities designed to enhance your experience."
+        }
+        keywords={
+          nidhiPrayasData?.metaKeywords ||
+          "facilities, amenities, state-of-the-art, experience"
+        }
         ogTitle={nidhiPrayasData?.metaOgTitle}
         ogDescription={nidhiPrayasData?.metaOgDescription}
         ogUrl="https://www.sjcestep.in/facilities/nidhi-prayas"
@@ -88,24 +96,27 @@ const NidhiPrayas = () => {
           {/* Hero Section */}
           <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-10 md:py-20 gap-10">
             <div className="flex-1 max-w-xl">
-              <p className="uppercase text-blue-500 font-semibold text-sm mb-2">Accelerator Program</p>
+              <p className="uppercase text-blue-500 font-semibold text-sm mb-2">
+                Accelerator Program
+              </p>
               <h1 className="font-montserrat font-black text-4xl md:text-5xl mb-4">
-                Propel Your Startup with <span className="text-gradient">MSME</span>
+                Propel Your Startup with{" "}
+                <span className="text-gradient">MSME</span>
               </h1>
               <p className="text-tertiary-gray text-lg mb-6">
                 {nidhiPrayasData?.heroDescription ||
                   "Join SJCE-STEP's immersive 4-month accelerator. We provide the mentorship, resources, and network to transform your promising startup into a market leader. Culminate your journey on Demo Day, pitching directly to a curated panel of investors."}
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Link href="#nidhi-prayas"> 
-                <button className="bg-blue-600 text-white rounded-lg px-6 py-2 font-semibold hover:bg-blue-700 transition">
-                  Learn More
-                </button>
+                <Link href="#nidhi-prayas">
+                  <button className="bg-blue-600 text-white rounded-lg px-6 py-2 font-semibold hover:bg-blue-700 transition">
+                    Learn More
+                  </button>
                 </Link>
                 <Link href="/contact">
-                <button className="bg-white border border-blue-600 text-blue-600 rounded-lg px-6 py-2 font-semibold hover:bg-blue-50 transition flex items-center gap-2">
-                  Book a Visit <MdOutlineArrowForward />
-                </button>
+                  <button className="bg-white border border-blue-600 text-blue-600 rounded-lg px-6 py-2 font-semibold hover:bg-blue-50 transition flex items-center gap-2">
+                    Book a Visit <MdOutlineArrowForward />
+                  </button>
                 </Link>
               </div>
             </div>
@@ -125,8 +136,11 @@ const NidhiPrayas = () => {
           </section>
 
           {/* NIDHI-PRAYAS Initiative Overview */}
-          <section id="nidhi-prayas" className="bg-white rounded-2xl shadow px-4 md:px-20 py-10 md:py-20 mt-8">
-            <h2  className="text-center font-montserrat font-black text-2xl md:text-4xl mb-4">
+          <section
+            id="nidhi-prayas"
+            className="bg-white rounded-2xl shadow px-4 md:px-20 py-10 md:py-20 mt-8"
+          >
+            <h2 className="text-center font-montserrat font-black text-2xl md:text-4xl mb-4">
               {nidhiPrayasData?.nidhiprayasTitle || "Title coming soon..."}
             </h2>
             <p className="text-center text-tertiary-gray max-w-2xl mx-auto mb-8">
@@ -135,7 +149,10 @@ const NidhiPrayas = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               {infoCards.map((card, idx) => (
-                <div key={idx} className="bg-white rounded-xl shadow p-6 flex flex-col gap-2 border border-slate-100">
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl shadow p-6 flex flex-col gap-2 border border-slate-100"
+                >
                   <h3 className="font-bold text-lg mb-2">{card.title}</h3>
                   <p className="text-tertiary-gray text-base">{card.desc}</p>
                 </div>
@@ -144,7 +161,9 @@ const NidhiPrayas = () => {
             <div className="mt-8 flex flex-col md:flex-row gap-8">
               <div className="flex-1">
                 <div className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl shadow p-6">
-                  <h3 className="font-bold text-xl mb-4">Core Objectives of the Grant</h3>
+                  <h3 className="font-bold text-xl mb-4">
+                    Core Objectives of the Grant
+                  </h3>
                   <ul className="flex flex-col gap-4">
                     {coreObjectives.map((obj, idx) => (
                       <li key={idx} className="flex items-start gap-2">
@@ -154,9 +173,9 @@ const NidhiPrayas = () => {
                     ))}
                   </ul>
                   <Link href="#about-us">
-                  <button className="mt-6 bg-white text-blue-700 rounded-lg px-6 py-2 font-semibold hover:bg-blue-50 transition">
-                    Discover More
-                  </button>
+                    <button className="mt-6 bg-white text-blue-700 rounded-lg px-6 py-2 font-semibold hover:bg-blue-50 transition">
+                      Discover More
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -164,7 +183,10 @@ const NidhiPrayas = () => {
           </section>
 
           {/* Facilities Section */}
-          <section id="about-us" className="mt-20 w-full p-3 md:max-w-3xl md:mx-auto">
+          <section
+            id="about-us"
+            className="mt-20 w-full p-3 md:max-w-3xl md:mx-auto"
+          >
             {nidhiPrayasData?.content ? (
               <article className="nidhi-data prose-a:text-center prose-a:py-4 prose-a:px-3 prose-a:text-white prose-a:bg-black">
                 <BlocksRenderer
@@ -219,7 +241,9 @@ const NidhiPrayas = () => {
                           );
                         default:
                           return (
-                            <h4 className="text-xl font-semibold my-3">{children}</h4>
+                            <h4 className="text-xl font-semibold my-3">
+                              {children}
+                            </h4>
                           );
                       }
                     },
@@ -228,7 +252,11 @@ const NidhiPrayas = () => {
                         {image?.url ? (
                           <img
                             src={image.url}
-                            alt={image?.alternativeText || image?.name || "Facility image"}
+                            alt={
+                              image?.alternativeText ||
+                              image?.name ||
+                              "Facility image"
+                            }
                             width={image?.width || 500}
                             height={image?.height || 300}
                             className="mx-auto max-w-lg w-full h-auto"
@@ -260,37 +288,57 @@ const NidhiPrayas = () => {
             )}
           </section>
 
-
           {/* Contact Us Section */}
           <section className="bg-gradient-to-br from-white via-slate-100 to-blue-50 rounded-2xl shadow p-6 md:p-10 mt-16 flex flex-col md:flex-row gap-8 items-stretch">
             <div className="flex-1 flex flex-col gap-4 justify-center">
-            <h2 className=" text-2xl md:text-3xl font-bold text-primary-dark-blue mb-2 flex items-center gap-2">
-                  Contact Us
-                </h2>
+              <h2 className=" text-2xl md:text-3xl font-bold text-primary-dark-blue mb-2 flex items-center gap-2">
+                Contact Us
+              </h2>
               <div className="flex items-center gap-4">
-              
-                <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000" alt="email" className="w-7 h-7" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=12623&format=png&color=000000"
+                  alt="email"
+                  className="w-7 h-7"
+                />
                 <span className="font-semibold text-black">Email:</span>
-                <a href={`mailto:${nidhiPrayasData?.contact?.email || ''}`} className="hover:underline text-blue-700">
+                <a
+                  href={`mailto:${nidhiPrayasData?.contact?.email || ""}`}
+                  className="hover:underline text-blue-700"
+                >
                   {nidhiPrayasData?.contact?.email || "contact@sjcestep.in"}
                 </a>
               </div>
               <div className="flex items-center gap-4">
-                <img src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000" alt="phone" className="w-7 h-7" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=9730&format=png&color=000000"
+                  alt="phone"
+                  className="w-7 h-7"
+                />
                 <span className="font-semibold text-black">Phone:</span>
-                <a href={`tel:${nidhiPrayasData?.contact?.phoneNumber1 || ''}`} className="hover:underline text-sm md:text-md text-blue-700">
+                <a
+                  href={`tel:${nidhiPrayasData?.contact?.phoneNumber1 || ""}`}
+                  className="hover:underline text-sm md:text-md text-blue-700"
+                >
                   {nidhiPrayasData?.contact?.phoneNumber1 || "+91-1234567890"}
                 </a>
                 <span className="mx-1 text-gray-400">/</span>
-                <a href={`tel:${nidhiPrayasData?.contact?.phoneNumber2 || ''}`} className="hover:underline text-sm md:text-md text-blue-700">
+                <a
+                  href={`tel:${nidhiPrayasData?.contact?.phoneNumber2 || ""}`}
+                  className="hover:underline text-sm md:text-md text-blue-700"
+                >
                   {nidhiPrayasData?.contact?.phoneNumber2 || "+91-9876543210"}
                 </a>
               </div>
               <div className="flex items-center gap-4">
-                <img src="https://img.icons8.com/?size=100&id=53430&format=png&color=000000" alt="address" className="w-7 h-7" />
+                <img
+                  src="https://img.icons8.com/?size=100&id=53430&format=png&color=000000"
+                  alt="address"
+                  className="w-7 h-7"
+                />
                 <span className="font-semibold text-black">Address:</span>
                 <span className="text-gray-700">
-                  {nidhiPrayasData?.contact?.Address || "SJCE-STEP, Mysuru, Karnataka, India"}
+                  {nidhiPrayasData?.contact?.Address ||
+                    "SJCE-STEP, Mysuru, Karnataka, India"}
                 </span>
               </div>
             </div>

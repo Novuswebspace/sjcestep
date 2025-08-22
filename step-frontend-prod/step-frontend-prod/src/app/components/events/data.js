@@ -131,7 +131,7 @@ export const FeaturedEventsData = [
     desc: "Get ready for three days of non-stop music, fun, and community at the Summer Music Festival 2024! Join us for an unforgettable weekend featuring performances by top artists from various genres including rock, pop, hip-hop, and EDM. With delicious food vendors, interactive art installations, and family-friendly activities, there's something for everyone to enjoy. Don't miss out on the highlight of the summer!",
   },
 ];
-// data/featuredEventsData.js
+// Data/featuredEventsData.js
 
 const featuredEventsData = [
   {
@@ -141,7 +141,7 @@ const featuredEventsData = [
     heading: "Emerging Tech Summit 2025",
     description: "Join the leaders of innovation in AI, ML, and robotics.",
     buttonText: "Learn More",
-    buttonLink: "/events/emerging-tech-summit"
+    buttonLink: "/events/emerging-tech-summit",
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ const featuredEventsData = [
     heading: "Sustainable Solutions Expo",
     description: "Discover the future of green technologies and startups.",
     buttonText: "Register Now",
-    buttonLink: "/events/sustainable-expo"
+    buttonLink: "/events/sustainable-expo",
   },
   {
     id: 3,
@@ -159,10 +159,9 @@ const featuredEventsData = [
     heading: "All about funding",
     description: "Tells young entrepreneurs about different stages in funding",
     buttonText: "Learn more",
-    buttonLink: "/events/funding-bootcamp"
-  }
+    buttonLink: "/events/funding-bootcamp",
+  },
   // Add more events as needed
 ];
 
 export default featuredEventsData;
-

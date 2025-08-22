@@ -55,12 +55,13 @@ const Header = memo(({ className, item }) => {
           {menuData.map((each, index) => (
             <li
               key={index}
-              className={`relative group font-medium hover:text-black transition-all duration-300 ease-in-out text-base ${pathName === each.path ||
-                  (pathName.includes(each.path) &&
-                    activePaths.includes(each.path))
+              className={`relative group font-medium hover:text-black transition-all duration-300 ease-in-out text-base ${
+                pathName === each.path ||
+                (pathName.includes(each.path) &&
+                  activePaths.includes(each.path))
                   ? "text-black"
                   : "text-extra-light-gray"
-                }`}
+              }`}
               ref={(el) => (dropdownRefs.current[index] = el)}
               onMouseEnter={() => each.submenu && setActiveDropdown(index)}
               onMouseLeave={() =>
@@ -81,8 +82,9 @@ const Header = memo(({ className, item }) => {
               {/* Submenu */}
               {each.submenu && (
                 <ul
-                  className={`absolute top-full left-0 mt-3 w-56 bg-white shadow-lg rounded-md border border-gray-200 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out ${activeDropdown === index ? "opacity-100 visible" : ""
-                    }`}
+                  className={`absolute top-full left-0 mt-3 w-56 bg-white shadow-lg rounded-md border border-gray-200 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out ${
+                    activeDropdown === index ? "opacity-100 visible" : ""
+                  }`}
                 >
                   {each.submenu.map((sub, subIndex) => (
                     <Link

@@ -29,20 +29,7 @@ const Page = () => {
     refetchOnWindowFocus: false,
   });
 
-  //Featured events
-  const fetchFeaturedEvents = async () => {
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_URL}/upcoming-events?filters[isFeatured][$eq]=true&populate=*`
-    );
-    return data.data;
-  };
-
-  const { data: featuredEvents } = useQuery({
-    queryKey: ["featuredEvents"],
-    queryFn: fetchFeaturedEvents,
-    staleTime: 10000,
-    refetchOnWindowFocus: false,
-  });
+  // Removed unused featuredEvents query
 
   //Upcoming events
   const fetchUpcomingEvents = async () => {
@@ -93,7 +80,7 @@ const Page = () => {
         <>
           {/* Featured Events Slider */}
           <FeaturedEventsSlider />
-          
+
           <section className="px-4 md:px-20 py-16 md:py-24">
             <section className="max-w-7xl md:mx-auto flex flex-col">
               <div>

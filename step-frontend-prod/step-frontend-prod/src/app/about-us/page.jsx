@@ -145,37 +145,39 @@ const AboutUs = () => {
               )}
               {/* Row below: 2 members */}
               <div className="flex flex-row justify-center gap-32 mt-12">
-                {[1, 2].map((i) =>
-                  imagesData?.managementCard?.[i] && (
-                    <motion.div
-                      key={i}
-                      variants={containerVariants}
-                      initial="hidden"
-                      whileInView="visible"
-                      viewport={{ once: true }}
-                      custom={i}
-                      className="flex flex-col items-center"
-                    >
-                      <img
-                        src={
-                          imagesData.managementCard[i]?.image?.data?.attributes?.url
-                        }
-                        alt={imagesData.managementCard[i]?.name}
-                        className="object-cover h-72 w-72 mx-auto"
-                      />
-                      <div className="mt-6 text-center">
-                        <p className="font-montserrat uppercase font-extrabold text-xl">
-                          {imagesData.managementCard[i]?.name}
-                        </p>
-                        <p className="text-medium-pink text-lg">
-                          {imagesData.managementCard[i]?.post}
-                        </p>
-                        <p className="text-tertiary-gray text-base mt-4">
-                          {imagesData.managementCard[i]?.designation}
-                        </p>
-                      </div>
-                    </motion.div>
-                  )
+                {[1, 2].map(
+                  (i) =>
+                    imagesData?.managementCard?.[i] && (
+                      <motion.div
+                        key={i}
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        custom={i}
+                        className="flex flex-col items-center"
+                      >
+                        <img
+                          src={
+                            imagesData.managementCard[i]?.image?.data
+                              ?.attributes?.url
+                          }
+                          alt={imagesData.managementCard[i]?.name}
+                          className="object-cover h-72 w-72 mx-auto"
+                        />
+                        <div className="mt-6 text-center">
+                          <p className="font-montserrat uppercase font-extrabold text-xl">
+                            {imagesData.managementCard[i]?.name}
+                          </p>
+                          <p className="text-medium-pink text-lg">
+                            {imagesData.managementCard[i]?.post}
+                          </p>
+                          <p className="text-tertiary-gray text-base mt-4">
+                            {imagesData.managementCard[i]?.designation}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )
                 )}
               </div>
             </div>
@@ -349,31 +351,35 @@ const AboutUs = () => {
                   custom={index}
                   key={index}
                   className="hidden lg:flex flex-col items-center text-center"
-                ><div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
-                  {each?.linkedin ? (
-                    <Link
-                      href={each?.linkedin}
-                      target="_blank"
-                      className="h-max"
-                    ><div className="h-50 w-50 flex items-center justify-center">
-                      <img
-                        src={each?.image?.data?.attributes?.url}
-                        className="w-full h-full rounded-xl"
-                        alt={each?.name}
-                      />
+                >
+                  <div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
+                    {each?.linkedin ? (
+                      <Link
+                        href={each?.linkedin}
+                        target="_blank"
+                        className="h-max"
+                      >
+                        <div className="h-50 w-50 flex items-center justify-center">
+                          <img
+                            src={each?.image?.data?.attributes?.url}
+                            className="w-full h-full rounded-xl"
+                            alt={each?.name}
+                          />
+                        </div>
+                      </Link>
+                    ) : (
+                      <div className="h-24">
+                        <img
+                          src={each?.image?.data?.attributes?.url}
+                          className="w-full h-full rounded-full"
+                          alt={each?.name}
+                        />
                       </div>
-                    </Link>
-                  ) : (
-                    <div className="h-24">
-                      <img
-                        src={each?.image?.data?.attributes?.url}
-                        className="w-full h-full rounded-full"
-                        alt={each?.name}
-                      />
-                    </div>
-                  )}
+                    )}
                     <div className="flex flex-col items-start justify-center px-2">
-                      <p className="font-semibold text-base mt-2">{each.name}</p>
+                      <p className="font-semibold text-base mt-2">
+                        {each.name}
+                      </p>
                       <p className=" text-black text-sm mt-2">Designation</p>
                       <p className=" text-gray-500 text-sm mt-2">ABC company</p>
                       <p className="text-medium-pink text-sm">{each.title}</p>
@@ -386,48 +392,54 @@ const AboutUs = () => {
                 <Slider {...settingsImpact}>
                   {imagesData?.ProfileCard?.map((each, index) =>
                     each?.linkedin ? (
-                      <div className="h-50 w-50 flex items-center justify-center mb-1 bg-neutral-200 p-3 rounded-xl">
-                      <Link
+                      <div
                         key={index}
-                        target="_blank"
-                        className="!flex flex-col justify-center items-center text-center"
-                        href={each?.linkedin}
+                        className="h-50 w-50 flex items-center justify-center mb-1 bg-neutral-200 p-3 rounded-xl"
                       >
-                        
-                        <img
-                          className="object-cover w-full h-full rounded-xl"
-                          src={each?.image?.data?.attributes?.url}
-                          alt="advisor profile-image"
-                        />
-                        <div className="flex flex-col items-center justify-center px-2">
-                        <p className="font-semibold text-base mt-5">
-                          {each.name}
-                        </p>
-                        <p className=" text-black text-md mt-2">
-                          Designation
-                        </p>
-                        <p className=" text-gray-500 text-sm mt-2">
-                          ABC company
-                        </p>
-                        <p className="text-medium-pink text-sm">{each.title}</p>
-                        </div>
-                        
-                      </Link>
+                        <Link
+                          key={index}
+                          target="_blank"
+                          className="!flex flex-col justify-center items-center text-center"
+                          href={each?.linkedin}
+                        >
+                          <img
+                            className="object-cover w-full h-full rounded-xl"
+                            src={each?.image?.data?.attributes?.url}
+                            alt="advisor profile-image"
+                          />
+                          <div className="flex flex-col items-center justify-center px-2">
+                            <p className="font-semibold text-base mt-5">
+                              {each.name}
+                            </p>
+                            <p className=" text-black text-md mt-2">
+                              Designation
+                            </p>
+                            <p className=" text-gray-500 text-sm mt-2">
+                              ABC company
+                            </p>
+                            <p className="text-medium-pink text-sm">
+                              {each.title}
+                            </p>
+                          </div>
+                        </Link>
                       </div>
                     ) : (
                       <li
                         key={index}
                         className="!flex flex-col justify-center items-center text-center"
-                      ><div className="h-max w-max flex items-center justify-center mb-1">
-                        <img
-                          className="object-cover w-full h-full"
-                          src={each?.image?.data?.attributes?.url}
-                          alt="advisor profile-image"
-                        />
-                        <p className="font-semibold text-base mt-5">
-                          {each.name}
-                        </p>
-                        <p className="text-medium-pink text-sm">{each.title}</p>
+                      >
+                        <div className="h-max w-max flex items-center justify-center mb-1">
+                          <img
+                            className="object-cover w-full h-full"
+                            src={each?.image?.data?.attributes?.url}
+                            alt="advisor profile-image"
+                          />
+                          <p className="font-semibold text-base mt-5">
+                            {each.name}
+                          </p>
+                          <p className="text-medium-pink text-sm">
+                            {each.title}
+                          </p>
                         </div>
                       </li>
                     )
@@ -448,20 +460,21 @@ const AboutUs = () => {
                   className="flex flex-col items-center"
                 >
                   <div className="h-80 w-52 flex flex-col  gap-3 p-2 rounded-xl bg-neutral-100">
-                  <div className="h-50 w-50 flex items-center justify-center mb-1">
-                    <img
-                      src={each?.image?.data?.attributes?.url}
-                      className="w-full h-full rounded-xl"
-                      alt="advisor profile-image"
-                    />
-                  </div>
-                    <div className="flex flex-col items-start justify-center px-2">                 
-                    <p className="font-semibold text-base mt-2">{each.name}</p>
-                    <p className=" text-black text-sm mt-2">Designation</p>
-                    <p className=" text-gray-500 text-sm mt-2">ABC company</p>
-                    <p className="text-medium-pink text-sm">{each.title}</p>
+                    <div className="h-50 w-50 flex items-center justify-center mb-1">
+                      <img
+                        src={each?.image?.data?.attributes?.url}
+                        className="w-full h-full rounded-xl"
+                        alt="advisor profile-image"
+                      />
                     </div>
-
+                    <div className="flex flex-col items-start justify-center px-2">
+                      <p className="font-semibold text-base mt-2">
+                        {each.name}
+                      </p>
+                      <p className=" text-black text-sm mt-2">Designation</p>
+                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className="text-medium-pink text-sm">{each.title}</p>
+                    </div>
                   </div>
                 </motion.li>
               ))}
@@ -551,7 +564,9 @@ const AboutUs = () => {
                 Contact Us
               </p>
               <p className="text-tertiary-gray text-lg mt-6 lg:text-center">
-                Get in touch with us to learn more about our programs, facilities, and opportunities. We're here to help you succeed.
+                Get in touch with us to learn more about our programs,
+                facilities, and opportunities. We&apos;re here to help you
+                succeed.
               </p>
             </div>
             <div className="flex justify-center items-center mt-7 md:mt-14">

@@ -126,7 +126,10 @@ const Page = () => {
                   pageRangeDisplayed={3}
                   marginPagesDisplayed={2}
                   previousLabel={
-                    <IoArrowBackOutline className="text-[20px]" color="#475467" />
+                    <IoArrowBackOutline
+                      className="text-[20px]"
+                      color="#475467"
+                    />
                   }
                   nextLabel={
                     <IoArrowBackOutline
@@ -142,15 +145,15 @@ const Page = () => {
                   nextClassName="pagination-next"
                   disabledClassName="pagination-disabled"
                   breakClassName="pagination-break"
-                // InitialPage={currentPage - 1}
+                  // InitialPage={currentPage - 1}
                 />
-                          </div>
+              </div>
+            </section>
           </section>
-        </section>
         </>
       )}
     </PrimaryLayout>
   );
 };
 
-      export default Page;
+export default Page;
