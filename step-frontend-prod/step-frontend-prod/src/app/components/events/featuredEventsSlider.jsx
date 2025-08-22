@@ -10,9 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import featuredEventsData from "./data";
 
 const FeaturedEventsSlider = ({ className = "" }) => {
-  if (!featuredEventsData || featuredEventsData.length === 0) {
-    return null;
-  }
+  if (!featuredEventsData || featuredEventsData.length === 0) return null;
 
   const settings = {
     dots: true,
@@ -25,15 +23,19 @@ const FeaturedEventsSlider = ({ className = "" }) => {
   };
 
   return (
-    <section className={`p-5 py-6 md:py-10 max-w-5xl max-h-2xl mx-auto ${className}`}>
-        <p className="px-3 py-1 text-3xl uppercase w-fit font-montserrat font-black border-lightish-gray">
-                    Featured Events
-        </p>
+    <section
+      className={`p-5 py-6 md:py-10 max-w-5xl max-h-2xl mx-auto ${className}`}
+    >
+      <p className="px-3 py-1 text-3xl uppercase w-fit font-montserrat font-black border-lightish-gray">
+        Featured Events
+      </p>
       <div className="container">
-        
         <Slider {...settings}>
           {featuredEventsData.map((event) => (
-            <div key={event.id} className="flex flex-col p-4 bg-gray-100 rounded-xl md:flex-row items-center justify-center text-center md:text-left gap-10 max-h-[800px]">
+            <div
+              key={event.id}
+              className="flex flex-col p-4 bg-gray-100 rounded-xl md:flex-row items-center justify-center text-center md:text-left gap-10 max-h-[800px]"
+            >
               <div className="md:max-w-[60vw] max-w-[70vw] mx-auto rounded-xl">
                 <Image
                   src={event.image}
@@ -42,12 +44,13 @@ const FeaturedEventsSlider = ({ className = "" }) => {
                   height={300}
                   layout="responsive"
                   objectFit="cover"
-                  style={{ height: "60%", width: "100%", objectFit: "cover" }} 
-                  
+                  style={{ height: "60%", width: "100%", objectFit: "cover" }}
                 />
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-center mx-auto text-center md:text-left px-2 md:px-4">
-                <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">{event.heading}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold mt-2 mb-4">
+                  {event.heading}
+                </h2>
                 <p className="text-lg md:text-xl mb-2">{event.description}</p>
                 <a
                   href={event.buttonLink}
@@ -64,8 +67,6 @@ const FeaturedEventsSlider = ({ className = "" }) => {
   );
 };
 
-FeaturedEventsSlider.propTypes = {
-  className: PropTypes.string,
-};
+FeaturedEventsSlider.propTypes = { className: PropTypes.string };
 
 export default FeaturedEventsSlider;

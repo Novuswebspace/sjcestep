@@ -16,7 +16,9 @@ const Meta = ({
 }) => {
   return (
     <>
-      <title>{title} | {siteName}</title>
+      <title>
+        {title} | {siteName}
+      </title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       {/* Open Graph Meta Tags */}
