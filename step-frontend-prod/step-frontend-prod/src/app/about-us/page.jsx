@@ -338,7 +338,8 @@ const AboutUs = () => {
                 {aboutData?.advisoryDescription}
               </p>
             </div>
-            <ul className="mt-76px lg:flex justify-center gap-[90px]">
+            {/* first 5 advisors */}
+            <ul className="mt-76px lg:flex justify-center gap-[80px]">
               {imagesData?.ProfileCard?.slice(0, 5).map((each, index) => (
                 <motion.li
                   variants={containerVariants}
@@ -348,57 +349,76 @@ const AboutUs = () => {
                   custom={index}
                   key={index}
                   className="hidden lg:flex flex-col items-center text-center"
-                >
+                ><div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
                   {each?.linkedin ? (
                     <Link
                       href={each?.linkedin}
                       target="_blank"
-                      className="inline-block h-24"
-                    >
+                      className="h-max"
+                    ><div className="h-50 w-50 flex items-center justify-center">
                       <img
                         src={each?.image?.data?.attributes?.url}
-                        className="w-full h-full"
+                        className="w-full h-full rounded-xl"
                         alt={each?.name}
                       />
+                      </div>
                     </Link>
                   ) : (
                     <div className="h-24">
                       <img
                         src={each?.image?.data?.attributes?.url}
-                        className="w-full h-full"
+                        className="w-full h-full rounded-full"
                         alt={each?.name}
                       />
                     </div>
                   )}
-                  <p className="font-semibold text-base mt-5">{each.name}</p>
-                  <p className="text-medium-pink text-sm">{each.title}</p>
+                    <div className="flex flex-col items-start justify-center px-2">
+                      <p className="font-semibold text-base mt-2">{each.name}</p>
+                      <p className=" text-black text-sm mt-2">Designation</p>
+                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className="text-medium-pink text-sm">{each.title}</p>
+                    </div>
+                  </div>
                 </motion.li>
               ))}
+              {/* mobile view */}
               <div className="lg:hidden">
                 <Slider {...settingsImpact}>
                   {imagesData?.ProfileCard?.map((each, index) =>
                     each?.linkedin ? (
+                      <div className="h-50 w-50 flex items-center justify-center mb-1 bg-neutral-200 p-3 rounded-xl">
                       <Link
                         key={index}
                         target="_blank"
                         className="!flex flex-col justify-center items-center text-center"
                         href={each?.linkedin}
                       >
+                        
                         <img
-                          className="object-cover w-full h-full"
+                          className="object-cover w-full h-full rounded-xl"
                           src={each?.image?.data?.attributes?.url}
                           alt="advisor profile-image"
                         />
+                        <div className="flex flex-col items-center justify-center px-2">
                         <p className="font-semibold text-base mt-5">
                           {each.name}
                         </p>
+                        <p className=" text-black text-md mt-2">
+                          Designation
+                        </p>
+                        <p className=" text-gray-500 text-sm mt-2">
+                          ABC company
+                        </p>
                         <p className="text-medium-pink text-sm">{each.title}</p>
+                        </div>
+                        
                       </Link>
+                      </div>
                     ) : (
                       <li
                         key={index}
                         className="!flex flex-col justify-center items-center text-center"
-                      >
+                      ><div className="h-max w-max flex items-center justify-center mb-1">
                         <img
                           className="object-cover w-full h-full"
                           src={each?.image?.data?.attributes?.url}
@@ -408,13 +428,15 @@ const AboutUs = () => {
                           {each.name}
                         </p>
                         <p className="text-medium-pink text-sm">{each.title}</p>
+                        </div>
                       </li>
                     )
                   )}
                 </Slider>
               </div>
             </ul>
-            <ul className="mt-14 hidden lg:flex justify-center gap-44">
+            {/* next 4 advisors */}
+            <ul className="mt-14 hidden lg:flex justify-center gap-36">
               {imagesData?.ProfileCard?.slice(5).map((each, index) => (
                 <motion.li
                   variants={containerVariants}
@@ -425,15 +447,22 @@ const AboutUs = () => {
                   key={index}
                   className="flex flex-col items-center"
                 >
-                  <div className="h-24">
+                  <div className="h-80 w-52 flex flex-col  gap-3 p-2 rounded-xl bg-neutral-100">
+                  <div className="h-50 w-50 flex items-center justify-center mb-1">
                     <img
                       src={each?.image?.data?.attributes?.url}
-                      className="w-full h-full"
+                      className="w-full h-full rounded-xl"
                       alt="advisor profile-image"
                     />
                   </div>
-                  <p className="font-semibold text-base mt-5">{each.name}</p>
-                  <p className="text-medium-pink text-sm">{each.title}</p>
+                    <div className="flex flex-col items-start justify-center px-2">                 
+                    <p className="font-semibold text-base mt-2">{each.name}</p>
+                    <p className=" text-black text-sm mt-2">Designation</p>
+                    <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                    <p className="text-medium-pink text-sm">{each.title}</p>
+                    </div>
+
+                  </div>
                 </motion.li>
               ))}
             </ul>

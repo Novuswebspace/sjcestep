@@ -49,46 +49,55 @@ export const advisorsData = [
     name: "Sudhanva Dhananjaya",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/sudhanva-dhananjaya.png",
+    company:"ABC company",
   },
   {
     name: "Nanjunda Palecanda P",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/nanjunda.png",
+    company: "ABC company",
   },
   {
     name: "Sabareeshan C.K",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/sabareesha.png",
+    company: "ABC company",
   },
   {
     name: "Anup P",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/anup.png",
+    company: "ABC company",
   },
   {
     name: "Vijayanand Gurudev",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/vijayanand.png",
+    company: "ABC company",
   },
   {
     name: "Narendra Narayanan",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/narendra.png",
+    company: "ABC company",
   },
   {
     name: "Ajith Pai",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/ajith.png",
+    company: "ABC company",
   },
   {
     name: "Vasantha Kumar M",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/vasantha.png",
+    company: "ABC company",
   },
   {
     name: "Ravi Shankar",
     designation: "Lorem ipsum",
     imageUrl: "/images/about-us/advisors/ravi-shankar.png",
+    company: "ABC company",
   },
 ];
 export const sliderContent = [

@@ -113,3 +113,56 @@ export const pastEventsData = [
     desc: "Get ready for three days of non-stop music, fun, and community at the Summer Music Festival 2024! Join us for an unforgettable weekend featuring performances by top artists from various genres including rock, pop, hip-hop, and EDM. With delicious food vendors, interactive art installations, and family-friendly activities, there's something for everyone to enjoy. Don't miss out on the highlight of the summer!",
   },
 ];
+export const FeaturedEventsData = [
+  {
+    id: 1,
+    image: "/images/events/event.png",
+    date: "june 15, 2024",
+    place: "Mysore",
+    title: "Future Trends in Artificial Intelligence",
+    desc: "Join us for a day of insightful discussions on the future trends shaping the field of Artificial Intelligence. Our expert speakers will delve into topics such as machine learning advancements, ethical AI practices, and the impact of AI on various industries. Don't miss out on this opportunity to gain valuable insights and network with fellow AI enthusiasts!",
+  },
+  {
+    id: 2,
+    image: "/images/events/event-dark.png",
+    date: "july 20-22, 2024",
+    place: "Bangalore",
+    title: "Summer Music Festival 2024",
+    desc: "Get ready for three days of non-stop music, fun, and community at the Summer Music Festival 2024! Join us for an unforgettable weekend featuring performances by top artists from various genres including rock, pop, hip-hop, and EDM. With delicious food vendors, interactive art installations, and family-friendly activities, there's something for everyone to enjoy. Don't miss out on the highlight of the summer!",
+  },
+];
+// data/featuredEventsData.js
+
+const featuredEventsData = [
+  {
+    id: 1,
+    image: "/images/events/past-event.png",
+    alt: "Event 1",
+    heading: "Emerging Tech Summit 2025",
+    description: "Join the leaders of innovation in AI, ML, and robotics.",
+    buttonText: "Learn More",
+    buttonLink: "/events/emerging-tech-summit"
+  },
+  {
+    id: 2,
+    image: "/images/events/past-event.png",
+    alt: "Event 2",
+    heading: "Sustainable Solutions Expo",
+    description: "Discover the future of green technologies and startups.",
+    buttonText: "Register Now",
+    buttonLink: "/events/sustainable-expo"
+  },
+  {
+    id: 3,
+    image: "/images/events/past-event.png",
+    alt: "Event 3",
+    heading: "All about funding",
+    description: "Tells young entrepreneurs about different stages in funding",
+    buttonText: "Learn more",
+    buttonLink: "/events/funding-bootcamp"
+  }
+  // Add more events as needed
+];
+
+export default featuredEventsData;
+

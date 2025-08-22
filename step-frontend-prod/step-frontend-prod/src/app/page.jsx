@@ -5,7 +5,7 @@
 /* eslint-disable object-curly-newline */
 
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { settingsImpact } from "@/components/home/sliderSettings";
 import BlogCard from "@/app/components/newsBlogs/blogCard";
 import ImpactCard from "@/components/home/impactCard";
@@ -31,8 +31,176 @@ import PopupModal from "./components/common/PopupModal";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const videoRef = useRef(null);
+  const [sliderIndex, setSliderIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
+
+  // Featured Programs Data
+  const featuredPrograms = [
+    {
+      id: 1,
+      badge: "FOR WOMEN",
+      badgeColor: "bg-purple-600",
+      title: "MSME Idea Hackathon 3.0",
+      description: "A business accelerator program for promoting startups. Startups/MSMEs get mentorship, funding, market assistance and advisors including skill aspects of business.",
+      imageText: "MSME Hackathon",
+      imageColor: "bg-purple-600",
+      link: "/programs/msme-hackathon"
+    },
+    {
+      id: 2,
+      badge: "TECH FOCUS",
+      badgeColor: "bg-blue-600",
+      title: "AI/ML Innovation Lab",
+      description: "Advanced artificial intelligence and machine learning program for tech enthusiasts. Participants get hands-on experience with cutting-edge AI technologies and real-world projects.",
+      imageText: "AI/ML Lab",
+      imageColor: "bg-blue-600",
+      link: "/programs/ai-ml-lab"
+    },
+    {
+      id: 3,
+      badge: "STARTUP",
+      badgeColor: "bg-green-600",
+      title: "Startup Accelerator Program",
+      description: "Comprehensive startup development program offering mentorship, funding opportunities, market access, and networking with industry experts and investors.",
+      imageText: "Accelerator",
+      imageColor: "bg-green-600",
+      link: "/programs/startup-accelerator"
+    },
+    {
+      id: 4,
+      badge: "INNOVATION",
+      badgeColor: "bg-orange-600",
+      title: "Digital Innovation Hub",
+      description: "A collaborative space for digital innovation and technology development. Focus on emerging technologies like IoT, Blockchain, and Cloud Computing.",
+      imageText: "Digital Hub",
+      imageColor: "bg-orange-600",
+      link: "/programs/digital-innovation"
+    },
+    {
+      id: 5,
+      badge: "RESEARCH",
+      badgeColor: "bg-indigo-600",
+      title: "Research & Development Center",
+      description: "State-of-the-art R&D facility supporting research projects, patent development, and commercialization of innovative technologies.",
+      imageText: "R&D Center",
+      imageColor: "bg-indigo-600",
+      link: "/programs/research-development"
+    }
+  ];
+
+  // Upcoming Programs Data
+  const upcomingPrograms = [
+    {
+      id: 1,
+      title: "Tech Innovation Challenge",
+      description: "A competitive platform for tech innovators to showcase their solutions",
+      date: "Dec 15, 2024",
+      link: "/programs/tech-innovation-challenge"
+    },
+    {
+      id: 2,
+      title: "Women Entrepreneur Workshop",
+      description: "Empowering women entrepreneurs with skills and networking opportunities",
+      date: "Dec 20, 2024",
+      link: "/programs/women-entrepreneur-workshop"
+    },
+    {
+      id: 3,
+      title: "Startup Pitch Competition",
+      description: "Platform for startups to pitch their ideas to investors and mentors",
+      date: "Jan 10, 2025",
+      link: "/programs/startup-pitch-competition"
+    },
+    {
+      id: 4,
+      title: "AI/ML Bootcamp",
+      description: "Intensive training program on artificial intelligence and machine learning",
+      date: "Jan 15, 2025",
+      link: "/programs/ai-ml-bootcamp"
+    },
+    {
+      id: 5,
+      title: "Digital Marketing Masterclass",
+      description: "Learn digital marketing strategies for business growth",
+      date: "Jan 25, 2025",
+      link: "/programs/digital-marketing-masterclass"
+    },
+    {
+      id: 6,
+      title: "Blockchain Development Workshop",
+      description: "Hands-on workshop on blockchain technology and applications",
+      date: "Feb 5, 2025",
+      link: "/programs/blockchain-workshop"
+    }
+  ];
+
+  // Our Incubatees Data
+  const incubatees = [
+    {
+      id: 1,
+      name: "InnovateLab",
+      industry: "Technology",
+      description: "AI-powered solutions for business automation",
+      logo: "/images/incubatees/innovatelab.png",
+      link: "/incubatees/innovatelab"
+    },
+    {
+      id: 2,
+      name: "Meracal",
+      industry: "Healthcare",
+      description: "Digital health monitoring and telemedicine platform",
+      logo: "/images/incubatees/meracal.png",
+      link: "/incubatees/meracal"
+    },
+    {
+      id: 3,
+      name: "Lama",
+      industry: "E-commerce",
+      description: "Sustainable fashion marketplace",
+      logo: "/images/incubatees/lama.png",
+      link: "/incubatees/lama"
+    },
+    {
+      id: 4,
+      name: "Agropak",
+      industry: "Agriculture",
+      description: "Smart farming solutions and crop management",
+      logo: "/images/incubatees/agropak.png",
+      link: "/incubatees/agropak"
+    },
+    {
+      id: 5,
+      name: "Everest",
+      industry: "Education",
+      description: "Online learning platform for skill development",
+      logo: "/images/incubatees/everest.png",
+      link: "/incubatees/everest"
+    },
+    {
+      id: 6,
+      name: "TechCorp",
+      industry: "Fintech",
+      description: "Digital payment and financial services",
+      logo: "/images/incubatees/techcorp.png",
+      link: "/incubatees/techcorp"
+    },
+    {
+      id: 7,
+      name: "Innov",
+      industry: "Clean Energy",
+      description: "Renewable energy solutions and sustainability",
+      logo: "/images/incubatees/innov.png",
+      link: "/incubatees/innov"
+    },
+    {
+      id: 8,
+      name: "DataFlow",
+      industry: "Data Analytics",
+      description: "Big data analytics and business intelligence",
+      logo: "/images/incubatees/dataflow.png",
+      link: "/incubatees/dataflow"
+    }
+  ];
 
   const resetPopup = () => {
     if (typeof window !== "undefined") {
@@ -166,17 +334,7 @@ const Home = () => {
     refetchOnWindowFocus: false,
   });
 
-  useEffect(() => {
-    const video = videoRef.current;
 
-    // Ensure the video element and source URL are available
-    if (video && homeData?.homeVideo?.data?.attributes?.url) {
-      video.src = `${homeData.homeVideo.data.attributes.url}`;
-
-      // Play the video when it's loaded and can play
-      const playPromise = video.play();
-    }
-  }, [homeData]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -349,21 +507,142 @@ const Home = () => {
                   Book a visit
                 </Link>
               </motion.div>
-              <div className="mx-auto mt-16 w-full md:px-20">
-                <video
-                  ref={videoRef}
-                  autoPlay
-                  loop
-                  controls={false}
-                  muted
-                  preload="auto"
-                  className="w-full h-full"
-                >
-                  <source
-                    src={homeData?.homeVideo?.data?.attributes?.url}
-                    type="video/mp4"
-                  />
-                </video>
+              <div className="mx-auto mt-16 w-full md:px-20 bg-white">
+                {/* Featured Programs Section */}
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold text-center mb-8 text-white">Featured Programs</h2>
+                  
+                  {/* Featured Programs Slider */}
+                  <div className="relative">
+                                         <div className="overflow-hidden">
+                       <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${sliderIndex * 100}%)` }}>
+                         {featuredPrograms.map((program) => (
+                           <div key={program.id} className="w-full flex-shrink-0">
+                             <div className="bg-gray-100 rounded-lg p-8 flex flex-col lg:flex-row gap-8">
+                               <div className="flex-1">
+                                 <div className={`inline-block ${program.badgeColor} text-white px-4 py-1 rounded-full text-sm mb-4`}>
+                                   {program.badge}
+                                 </div>
+                                 <h3 className="text-2xl font-bold text-slate-700 mb-4">{program.title}</h3>
+                                 <p className="text-gray-700 mb-6">
+                                   {program.description}
+                                 </p>
+                                 <Link href={program.link}>
+                                   <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-6 py-3 rounded hover:opacity-90 transition-opacity">
+                                     Learn More
+                                   </button>
+                                 </Link>
+                               </div>
+                               <div className="flex-1">
+                                 <div className={`${program.imageColor} rounded-lg h-48 flex items-center justify-center`}>
+                                   <span className="text-white text-xl font-semibold">{program.imageText}</span>
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
+                         ))}
+                       </div>
+                     </div>
+
+                                         {/* Navigation Controls */}
+                     <div className="flex justify-center items-center gap-4 mt-6">
+                       <button 
+                         onClick={() => setSliderIndex((prev) => prev === 0 ? featuredPrograms.length - 1 : prev - 1)}
+                         className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
+                       >
+                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                         </svg>
+                       </button>
+                       <div className="flex gap-2">
+                         {featuredPrograms.map((_, index) => (
+                           <div 
+                             key={index}
+                             className={`w-3 h-3 rounded-full ${sliderIndex === index ? 'bg-blue-500' : 'bg-gray-600 border border-gray-500'}`}
+                           ></div>
+                         ))}
+                       </div>
+                       <button 
+                         onClick={() => setSliderIndex((prev) => prev === featuredPrograms.length - 1 ? 0 : prev + 1)}
+                         className="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors"
+                       >
+                         <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                         </svg>
+                       </button>
+                     </div>
+                  </div>
+                </div>
+
+                {/* Upcoming Programs Section */}
+                <div className="mb-16">
+                  <h2 className="text-3xl font-bold text-center mb-8 text-slate-700">Upcoming Programs</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                                         {upcomingPrograms.map((program) => (
+                       <Link key={program.id} href={program.link}>
+                         <div className="bg-gray-100 border-2 border-slate-300 rounded-lg p-6 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                           <h3 className="text-slate-800 font-semibold">{program.title}</h3>
+                           <p className="text-tertiary-gray text-sm mt-2">{program.date}</p>
+                         </div>
+                       </Link>
+                     ))}
+                  </div>
+                </div>
+
+                                 {/* Our Incubatees Section */}
+                 <div className="mb-16">
+                   <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">Our Incubatees</h2>
+                   
+                   {/* First Row - Slides Left to Right */}
+                   <div className="overflow-hidden mb-4">
+                     <div className="flex animate-marquee-left">
+                       {incubatees.slice(0, 4).map((incubatee) => (
+                         <div key={incubatee.id} className="flex-shrink-0 w-1/4 px-2">
+                           <Link href={incubatee.link}>
+                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
+                             </div>
+                           </Link>
+                         </div>
+                       ))}
+                       {/* Duplicate for seamless loop */}
+                       {incubatees.slice(0, 4).map((incubatee) => (
+                         <div key={`${incubatee.id}-duplicate`} className="flex-shrink-0 w-1/4 px-2">
+                           <Link href={incubatee.link}>
+                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
+                             </div>
+                           </Link>
+                         </div>
+                       ))}
+                     </div>
+                   </div>
+                   
+                   {/* Second Row - Slides Right to Left */}
+                   <div className="overflow-hidden">
+                     <div className="flex animate-marquee-right">
+                       {incubatees.slice(4, 8).map((incubatee) => (
+                         <div key={incubatee.id} className="flex-shrink-0 w-1/4 px-2">
+                           <Link href={incubatee.link}>
+                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
+                             </div>
+                           </Link>
+                         </div>
+                       ))}
+                       {/* Duplicate for seamless loop */}
+                       {incubatees.slice(4, 8).map((incubatee) => (
+                         <div key={`${incubatee.id}-duplicate`} className="flex-shrink-0 w-1/4 px-2">
+                           <Link href={incubatee.link}>
+                             <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                               <h3 className="text-slate-800 font-semibold text-sm">{incubatee.name}</h3>
+                             </div>
+                           </Link>
+                         </div>
+                       ))}
+                     </div>
+                   </div>
+                 </div>
               </div>
             </section>
             {/* Hero Banner Section end*/}
