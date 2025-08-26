@@ -24,19 +24,19 @@ const FeaturedEventsSlider = ({ className = "" }) => {
 
   return (
     <section
-      className={`p-5 py-6 md:py-10 max-w-5xl max-h-2xl mx-auto ${className}`}
+      className="p-5 py-6 md:py-10 w-full max-h-2xl mx-auto"
     >
-      <p className="px-3 py-1 text-3xl uppercase w-fit font-montserrat font-black border-lightish-gray">
+      <p className="px-3 py-1 text-3xl mx-auto md:mx-16 uppercase w-fit font-montserrat font-black border-lightish-gray">
         Featured Events
       </p>
-      <div className="container">
+      <div className="container mx-auto">
         <Slider {...settings}>
           {featuredEventsData.map((event) => (
             <div
               key={event.id}
               className="flex flex-col p-4 bg-gray-100 rounded-xl md:flex-row items-center justify-center text-center md:text-left gap-10 max-h-[800px]"
             >
-              <div className="md:max-w-[60vw] max-w-[70vw] mx-auto rounded-xl">
+              <div className="md:w-full max-w-[70vw] mx-auto rounded-xl">
                 <Image
                   src={event.image}
                   alt={event.alt}
