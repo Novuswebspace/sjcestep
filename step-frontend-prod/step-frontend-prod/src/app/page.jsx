@@ -1021,7 +1021,7 @@ const Home = () => {
               <ul className="flex justify-center items-center flex-wrap gap-8 mt-16 mx-auto">
                 {imagesData?.testimonialCard?.map((each, index) => (
                   <motion.li
-                    className="md:max-w-80 bg-white p-4 border border-secondary-gray"
+                    className="md:max-w-80 h-80 bg-white p-4 border border-secondary-gray"
                     key={index}
                     whileHover={{ scale: 1.1 }}
                     variants={containerVariants}

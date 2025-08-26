@@ -105,10 +105,7 @@ const AboutUs = () => {
               </p>
               <p className="font-montserrat font-black text-4xl mt-3">
                 {aboutData?.managementTitle}
-              </p>
-              <p className="text-tertiary-gray text-lg mt-6 max-w-2xl lg:text-center">
-                {aboutData?.managementDesc}
-              </p>
+              </p>  
             </div>
 
             {/* Pyramid structure for Management */}
@@ -128,7 +125,7 @@ const AboutUs = () => {
                       imagesData.managementCard[0]?.image?.data?.attributes?.url
                     }
                     alt={imagesData.managementCard[0]?.name}
-                    className="object-cover h-72 w-72 mx-auto"
+                    className="object-cover h-72 w-72 mx-auto rounded-xl"
                   />
                   <div className="mt-6 text-center">
                     <p className="font-montserrat uppercase font-extrabold text-xl">
@@ -163,7 +160,7 @@ const AboutUs = () => {
                               ?.attributes?.url
                           }
                           alt={imagesData.managementCard[i]?.name}
-                          className="object-cover h-72 w-72 mx-auto"
+                          className="object-cover h-72 w-72 mx-auto rounded-xl"
                         />
                         <div className="mt-6 text-center">
                           <p className="font-montserrat uppercase font-extrabold text-xl">
@@ -181,55 +178,7 @@ const AboutUs = () => {
                 )}
               </div>
             </div>
-            <ul className="hidden lg:px-16 lg:grid grid-cols-1 lg:grid-cols-7 gap-12 lg:gap-8 mt-16">
-              {imagesData?.managementCard?.slice(0, 3).map((each, index) => (
-                <motion.li
-                  variants={containerVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  custom={index}
-                  key={index}
-                  className={`${index !== 1 ? "lg:col-span-2 order-1 lg:order-none" : "lg:col-span-3"}`}
-                >
-                  {each?.linkedin ? (
-                    <Link target="_blank" href={each?.linkedin}>
-                      <img
-                        src={each?.image?.data?.attributes?.url}
-                        alt={each.name}
-                        className="object-cover h-72 w-full"
-                      />
-                      <div className="mt-6">
-                        <p className="font-montserrat uppercase font-extrabold text-xl">
-                          {each.name}
-                        </p>
-                        <p className="text-medium-pink text-lg">{each.post}</p>
-                        <p className="text-tertiary-gray text-base mt-4">
-                          {each.designation}
-                        </p>
-                      </div>
-                    </Link>
-                  ) : (
-                    <>
-                      <img
-                        src={each?.image?.data?.attributes?.url}
-                        alt={each.name}
-                        className="object-cover h-72 w-full"
-                      />
-                      <div className="mt-6">
-                        <p className="font-montserrat uppercase font-extrabold text-xl">
-                          {each.name}
-                        </p>
-                        <p className="text-medium-pink text-lg">{each.post}</p>
-                        <p className="text-tertiary-gray text-base mt-4">
-                          {each.designation}
-                        </p>
-                      </div>
-                    </>
-                  )}
-                </motion.li>
-              ))}
-            </ul>
+           
             <ul className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 mt-10 lg:mt-16">
               {imagesData?.managementCard?.slice(3).map((each, index) => (
                 <motion.li
@@ -245,9 +194,9 @@ const AboutUs = () => {
                       <img
                         src={each?.image?.data?.attributes?.url}
                         alt={each.name}
-                        className="object-cover h-72 w-full"
+                        className="object-cover h-72 w-72 rounded-xl m-auto"
                       />
-                      <div className="mt-6">
+                      <div className="mt-6 w-80 m-auto">
                         <p className="font-montserrat uppercase font-extrabold text-xl">
                           {each.name}
                         </p>
@@ -262,9 +211,9 @@ const AboutUs = () => {
                       <img
                         src={each?.image?.data?.attributes?.url}
                         alt={each.name}
-                        className="object-cover h-72 w-full"
+                        className="object-cover h-72 w-72 rounded-xl m-auto"
                       />
-                      <div className="mt-6">
+                      <div className="mt-6 w-80" >
                         <p className="font-montserrat uppercase font-extrabold text-xl">
                           {each.name}
                         </p>
@@ -371,7 +320,7 @@ const AboutUs = () => {
                       <div className="h-24">
                         <img
                           src={each?.image?.data?.attributes?.url}
-                          className="w-full h-full rounded-full"
+                          className="w-full h-full rounded-xl"
                           alt={each?.name}
                         />
                       </div>
@@ -459,14 +408,30 @@ const AboutUs = () => {
                   key={index}
                   className="flex flex-col items-center"
                 >
-                  <div className="h-80 w-52 flex flex-col  gap-3 p-2 rounded-xl bg-neutral-100">
-                    <div className="h-50 w-50 flex items-center justify-center mb-1">
-                      <img
-                        src={each?.image?.data?.attributes?.url}
-                        className="w-full h-full rounded-xl"
-                        alt="advisor profile-image"
-                      />
-                    </div>
+                   <div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
+                    {each?.linkedin ? (
+                      <Link
+                        href={each?.linkedin}
+                        target="_blank"
+                        className="h-max"
+                      >
+                        <div className="h-50 w-50 flex items-center justify-center">
+                          <img
+                            src={each?.image?.data?.attributes?.url}
+                            className="w-full h-full rounded-xl"
+                            alt={each?.name}
+                          />
+                        </div>
+                      </Link>
+                    ) : (
+                      <div className="h-24">
+                        <img
+                          src={each?.image?.data?.attributes?.url}
+                          className="w-full h-full rounded-xl"
+                          alt={each?.name}
+                        />
+                      </div>
+                    )}
                     <div className="flex flex-col items-start justify-center px-2">
                       <p className="font-semibold text-base mt-2">
                         {each.name}
