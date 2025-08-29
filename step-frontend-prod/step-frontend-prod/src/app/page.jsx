@@ -121,33 +121,7 @@ const Home = () => {
         "Platform for startups to pitch their ideas to investors and mentors",
       date: "Jan 10, 2025",
       link: "/programs/startup-pitch-competition",
-    },
-    {
-      id: 4,
-      title: "AI/ML Bootcamp",
-      banner: "/images/programs/start-up.png",
-      description:
-        "Intensive training program on artificial intelligence and machine learning",
-      date: "Jan 15, 2025",
-      link: "/programs/ai-ml-bootcamp",
-    },
-    {
-      id: 5,
-      title: "Digital Marketing Masterclass",
-      banner: "/images/programs/start-up.png",
-      description: "Learn digital marketing strategies for business growth",
-      date: "Jan 25, 2025",
-      link: "/programs/digital-marketing-masterclass",
-    },
-    {
-      id: 6,
-      title: "Blockchain Development Workshop",
-      banner: "/images/programs/start-up.png",
-      description:
-        "Hands-on workshop on blockchain technology and applications",
-      date: "Feb 5, 2025",
-      link: "/programs/blockchain-workshop",
-    },
+    }
   ];
 
   // Our Incubatees Data
