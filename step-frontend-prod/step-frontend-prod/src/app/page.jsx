@@ -121,7 +121,7 @@ const Home = () => {
         "Platform for startups to pitch their ideas to investors and mentors",
       date: "Jan 10, 2025",
       link: "/programs/startup-pitch-competition",
-    }
+    },
   ];
 
   // Our Incubatees Data
