@@ -41,7 +41,7 @@ const FeaturedEventsSlider = ({ className = "" }) => {
                   src={event.image}
                   alt={event.alt}
                   width={800}
-                  height={300}
+                  height={100}
                   layout="responsive"
                   objectFit="cover"
                   style={{ height: "60%", width: "100%", objectFit: "cover" }}

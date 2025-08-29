@@ -31,7 +31,7 @@ import PopupModal from "./components/common/PopupModal";
 
 const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [sliderIndex, setSliderIndex] = useState(0);
+  
   const [showPopup, setShowPopup] = useState(false);
 
   // Featured Programs Data
@@ -98,6 +98,7 @@ const Home = () => {
     {
       id: 1,
       title: "Tech Innovation Challenge",
+      banner:"/images/programs/start-up.png",
       description:
         "A competitive platform for tech innovators to showcase their solutions",
       date: "Dec 15, 2024",
@@ -106,6 +107,7 @@ const Home = () => {
     {
       id: 2,
       title: "Women Entrepreneur Workshop",
+      banner:"/images/programs/start-up.png",
       description:
         "Empowering women entrepreneurs with skills and networking opportunities",
       date: "Dec 20, 2024",
@@ -114,6 +116,7 @@ const Home = () => {
     {
       id: 3,
       title: "Startup Pitch Competition",
+      banner:"/images/programs/start-up.png",
       description:
         "Platform for startups to pitch their ideas to investors and mentors",
       date: "Jan 10, 2025",
@@ -122,6 +125,7 @@ const Home = () => {
     {
       id: 4,
       title: "AI/ML Bootcamp",
+      banner:"/images/programs/start-up.png",
       description:
         "Intensive training program on artificial intelligence and machine learning",
       date: "Jan 15, 2025",
@@ -130,6 +134,7 @@ const Home = () => {
     {
       id: 5,
       title: "Digital Marketing Masterclass",
+      banner:"/images/programs/start-up.png",
       description: "Learn digital marketing strategies for business growth",
       date: "Jan 25, 2025",
       link: "/programs/digital-marketing-masterclass",
@@ -137,6 +142,7 @@ const Home = () => {
     {
       id: 6,
       title: "Blockchain Development Workshop",
+      banner:"/images/programs/start-up.png",
       description:
         "Hands-on workshop on blockchain technology and applications",
       date: "Feb 5, 2025",
@@ -365,6 +371,18 @@ const Home = () => {
       },
     }),
   };
+    const [sliderIndex, setSliderIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSliderIndex((prev) =>
+        prev === featuredPrograms.length - 1 ? 0 : prev + 1
+      );
+    }, 4000); // change slide every 4 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, [featuredPrograms.length]);
+
 
   return (
     <>
@@ -636,16 +654,19 @@ const Home = () => {
                   <h2 className="text-3xl font-bold text-center mb-8 text-slate-700">
                     Upcoming Programs
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {upcomingPrograms.map((program) => (
                       <Link key={program.id} href={program.link}>
-                        <div className="bg-gray-100 border-2 border-slate-300 rounded-lg p-6 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                          <h3 className="text-slate-800 font-semibold">
-                            {program.title}
-                          </h3>
-                          <p className="text-tertiary-gray text-sm mt-2">
-                            {program.date}
-                          </p>
+                        <div className="flex justify-around gap-3 bg-gray-100 border-2 border-slate-300 rounded-lg p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
+                          <img src={program.banner} alt={program.title} className="h-24 w-40"/>
+                          <div className="flex flex-col items-center justify-center">
+                            <h3 className="text-slate-800 font-semibold">
+                              {program.title}
+                            </h3>
+                            <p className="text-tertiary-gray text-sm mt-2">
+                              {program.date}
+                            </p>
+                          </div>
                         </div>
                       </Link>
                     ))}
