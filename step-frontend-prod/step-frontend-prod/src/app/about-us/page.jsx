@@ -325,12 +325,12 @@ const AboutUs = () => {
                         />
                       </div>
                     )}
-                    <div className="flex flex-col items-start justify-center px-2">
-                      <p className="font-semibold text-base mt-2">
+                    <div className="flex flex-col justify-center px-2">
+                      <p className="font-semibold text-base text-left mt-2">
                         {each.name}
                       </p>
-                      <p className=" text-black text-sm mt-2">Designation</p>
-                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className=" text-black text-sm text-left mt-2">{each.designation}</p>
+                      <p className=" text-gray-500 text-left text-sm mt-2">{each.company}</p>
                       <p className="text-medium-pink text-sm">{each.title}</p>
                     </div>
                   </div>
@@ -361,10 +361,10 @@ const AboutUs = () => {
                               {each.name}
                             </p>
                             <p className=" text-black text-md mt-2">
-                              Designation
+                              {each.designation}
                             </p>
                             <p className=" text-gray-500 text-sm mt-2">
-                              ABC company
+                              {each.company}
                             </p>
                             <p className="text-medium-pink text-sm">
                               {each.title}
@@ -432,12 +432,12 @@ const AboutUs = () => {
                         />
                       </div>
                     )}
-                    <div className="flex flex-col items-start justify-center px-2">
+                    <div className="flex flex-col justify-center px-2">
                       <p className="font-semibold text-base mt-2">
                         {each.name}
                       </p>
-                      <p className=" text-black text-sm mt-2">Designation</p>
-                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className=" text-black text-sm mt-2">{each.designation}</p>
+                      <p className=" text-gray-500 text-sm mt-2">{each.company}</p>
                       <p className="text-medium-pink text-sm">{each.title}</p>
                     </div>
                   </div>
