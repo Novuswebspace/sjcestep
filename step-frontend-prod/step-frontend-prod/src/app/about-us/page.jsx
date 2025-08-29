@@ -105,7 +105,7 @@ const AboutUs = () => {
               </p>
               <p className="font-montserrat font-black text-4xl mt-3">
                 {aboutData?.managementTitle}
-              </p>  
+              </p>
             </div>
 
             {/* Pyramid structure for Management */}
@@ -178,7 +178,7 @@ const AboutUs = () => {
                 )}
               </div>
             </div>
-           
+
             <ul className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 mt-10 lg:mt-16">
               {imagesData?.managementCard?.slice(3).map((each, index) => (
                 <motion.li
@@ -213,7 +213,7 @@ const AboutUs = () => {
                         alt={each.name}
                         className="object-cover h-72 w-72 rounded-xl m-auto"
                       />
-                      <div className="mt-6 w-80" >
+                      <div className="mt-6 w-80">
                         <p className="font-montserrat uppercase font-extrabold text-xl">
                           {each.name}
                         </p>
@@ -290,7 +290,7 @@ const AboutUs = () => {
               </p>
             </div>
             {/* first 5 advisors */}
-            <ul className="mt-76px lg:flex justify-center gap-[80px]">
+            <ul className="mt-[76px] lg:flex justify-center gap-[80px]">
               {imagesData?.ProfileCard?.slice(0, 5).map((each, index) => (
                 <motion.li
                   variants={containerVariants}
@@ -325,12 +325,16 @@ const AboutUs = () => {
                         />
                       </div>
                     )}
-                    <div className="flex flex-col items-start justify-center px-2">
-                      <p className="font-semibold text-base mt-2">
+                    <div className="flex flex-col justify-center px-2">
+                      <p className="font-semibold text-base text-left mt-2">
                         {each.name}
                       </p>
-                      <p className=" text-black text-sm mt-2">Designation</p>
-                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className=" text-black text-sm text-left mt-2">
+                        {each.designation}
+                      </p>
+                      <p className=" text-gray-500 text-left text-sm mt-2">
+                        {each.company}
+                      </p>
                       <p className="text-medium-pink text-sm">{each.title}</p>
                     </div>
                   </div>
@@ -361,10 +365,10 @@ const AboutUs = () => {
                               {each.name}
                             </p>
                             <p className=" text-black text-md mt-2">
-                              Designation
+                              {each.designation}
                             </p>
                             <p className=" text-gray-500 text-sm mt-2">
-                              ABC company
+                              {each.company}
                             </p>
                             <p className="text-medium-pink text-sm">
                               {each.title}
@@ -408,7 +412,7 @@ const AboutUs = () => {
                   key={index}
                   className="flex flex-col items-center"
                 >
-                   <div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
+                  <div className="h-80 w-52 flex flex-col p-2 gap-3 rounded-xl bg-neutral-100">
                     {each?.linkedin ? (
                       <Link
                         href={each?.linkedin}
@@ -432,12 +436,16 @@ const AboutUs = () => {
                         />
                       </div>
                     )}
-                    <div className="flex flex-col items-start justify-center px-2">
+                    <div className="flex flex-col justify-center px-2">
                       <p className="font-semibold text-base mt-2">
                         {each.name}
                       </p>
-                      <p className=" text-black text-sm mt-2">Designation</p>
-                      <p className=" text-gray-500 text-sm mt-2">ABC company</p>
+                      <p className=" text-black text-sm mt-2">
+                        {each.designation}
+                      </p>
+                      <p className=" text-gray-500 text-sm mt-2">
+                        {each.company}
+                      </p>
                       <p className="text-medium-pink text-sm">{each.title}</p>
                     </div>
                   </div>
