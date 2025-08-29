@@ -1454,9 +1454,12 @@ export interface ApiProgramProgram extends Schema.CollectionType {
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Attribute.String;
     desc: Attribute.Text;
-    content: Attribute.Blocks;
     slug: Attribute.UID & Attribute.Required;
     alt: Attribute.String & Attribute.Required;
+    briefing_heading: Attribute.String;
+    briefing: Attribute.String;
+    highlights: Attribute.Text;
+    objectives: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

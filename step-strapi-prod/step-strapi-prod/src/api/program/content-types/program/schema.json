@@ -29,9 +29,6 @@
     "desc": {
       "type": "text"
     },
-    "content": {
-      "type": "blocks"
-    },
     "slug": {
       "type": "uid",
       "required": true
@@ -39,6 +36,18 @@
     "alt": {
       "type": "string",
       "required": true
+    },
+    "briefing_heading": {
+      "type": "string"
+    },
+    "briefing": {
+      "type": "string"
+    },
+    "highlights": {
+      "type": "text"
+    },
+    "objectives": {
+      "type": "blocks"
     }
   }
 }
