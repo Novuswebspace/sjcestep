@@ -79,7 +79,9 @@ export const ProgramComponent = ({ params }) => {
               <div className="order-2 md:order-1">
                 {desc && (
                   <article>
-                    <p className="text-lg md:text-xl text-slate-600 leading-8">{desc}</p>
+                    <p className="text-lg md:text-xl text-slate-600 leading-8">
+                      {desc}
+                    </p>
                   </article>
                 )}
               </div>
@@ -107,24 +109,41 @@ export const ProgramComponent = ({ params }) => {
                 {(briefing_heading || "Briefing") && (
                   <div>
                     <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
-                    <h3 className="text-[28px] md:text-[32px] font-montserrat uppercase text-slate-800">{briefing_heading || "Briefing"}</h3>
+                    <h3 className="text-[28px] md:text-[32px] font-montserrat uppercase text-slate-800">
+                      {briefing_heading || "Briefing"}
+                    </h3>
                   </div>
                 )}
                 {briefing && (
-                  <p className="mt-4 text-base md:text-lg text-slate-700 leading-7 whitespace-pre-line">{briefing}</p>
+                  <p className="mt-4 text-base md:text-lg text-slate-700 leading-7 whitespace-pre-line">
+                    {briefing}
+                  </p>
                 )}
               </div>
 
               {/* Highlights */}
               {highlightItems && highlightItems.length > 0 && (
                 <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-sky-600 text-white shadow-lg p-5 md:p-6">
-                  <h3 className="text-[28px] md:text-[32px] font-montserrat">Program Highlights</h3>
+                  <h3 className="text-[28px] md:text-[32px] font-montserrat">
+                    Program Highlights
+                  </h3>
                   <ul className="mt-4 space-y-3">
                     {highlightItems.map((item, idx) => (
                       <li key={`hl-${idx}`} className="flex gap-3">
                         <span className="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5">
-                            <path d="M20 7L9 18L4 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-3.5 w-3.5"
+                          >
+                            <path
+                              d="M20 7L9 18L4 13"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
                           </svg>
                         </span>
                         <span className="text-white/95">{item}</span>
@@ -147,13 +166,16 @@ export const ProgramComponent = ({ params }) => {
                       paragraph: ({ children }) => (
                         <p className="text-xl text-white">{children}</p>
                       ),
-                      list: ({ children, format }) => (
+                      list: ({ children, format }) =>
                         format === "ordered" ? (
-                          <ol className="list-decimal pl-6 space-y-3">{children}</ol>
+                          <ol className="list-decimal pl-6 space-y-3">
+                            {children}
+                          </ol>
                         ) : (
-                          <ul className="list-none pl-0 space-y-3">{children}</ul>
-                        )
-                      ),
+                          <ul className="list-none pl-0 space-y-3">
+                            {children}
+                          </ul>
+                        ),
                       listItem: ({ children }) => (
                         <li className="flex items-start gap-3">
                           <FaCheckCircle className="text-green-300 mt-1 shrink-0" />
@@ -172,30 +194,41 @@ export const ProgramComponent = ({ params }) => {
                             return (
                               <div>
                                 <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
-                                <h1 className="text-5xl leading-[3.7rem]">{children}</h1>
+                                <h1 className="text-5xl leading-[3.7rem]">
+                                  {children}
+                                </h1>
                               </div>
                             );
                           case 2:
                             return (
                               <div>
                                 <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
-                                <h2 className="text-[40px] leading-[3.5rem]">{children}</h2>
+                                <h2 className="text-[40px] leading-[3.5rem]">
+                                  {children}
+                                </h2>
                               </div>
                             );
                           case 3:
                             return (
                               <div>
                                 <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
-                                <h3 className="text-[32px] font-montserrat uppercase">{children}</h3>
+                                <h3 className="text-[32px] font-montserrat uppercase">
+                                  {children}
+                                </h3>
                               </div>
                             );
                           default:
-                            return <h4 className="text-2xl text-white">{children}</h4>;
+                            return (
+                              <h4 className="text-2xl text-white">
+                                {children}
+                              </h4>
+                            );
                         }
                       },
                       link: ({ children, url }) => {
                         const hasText = React.Children.toArray(children).some(
-                          (c) => (typeof c === "string" ? c.trim() !== "" : true)
+                          (c) =>
+                            typeof c === "string" ? c.trim() !== "" : true
                         );
                         if (!hasText) return null;
                         return (
