@@ -6,10 +6,8 @@
 
 "use client";
 import { PropTypes } from "prop-types";
-import BannerCard from "@/components/common/bannerCard";
 import React from "react";
 import axios from "axios";
-import HeaderText from "@/components/common/headerText";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Loader from "@/components/common/loaders/primaryLoader";
 import PrimaryLayout from "../layouts/primaryLayout";
@@ -37,7 +35,7 @@ export const ProgramComponent = ({ params }) => {
     title,
     desc,
     alt,
-    briefing_heading,
+    briefing_heading: briefingHeading,
     briefing,
     highlights,
     objectives,
@@ -102,18 +100,16 @@ export const ProgramComponent = ({ params }) => {
           </section>
 
           {/* Briefing & Highlights section */}
-          {(briefing || (highlightItems && highlightItems.length > 0)) && (
+          {(briefing || highlightItems?.length > 0) && (
             <section className="max-w-5xl md:mx-auto mb-16 md:mb-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {/* Briefing */}
               <div className="rounded-2xl bg-white/70 ring-1 ring-slate-100 shadow-sm p-5 md:p-6">
-                {(briefing_heading || "Briefing") && (
-                  <div>
-                    <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
-                    <h3 className="text-[28px] md:text-[32px] font-montserrat uppercase text-slate-800">
-                      {briefing_heading || "Briefing"}
-                    </h3>
-                  </div>
-                )}
+                <div>
+                  <div className="h-1 w-full bg-gradient-to-r from-sky-400 to-indigo-400 rounded-full mb-6"></div>
+                  <h3 className="text-[28px] md:text-[32px] font-montserrat uppercase text-slate-800">
+                    {briefingHeading || "Briefing"}
+                  </h3>
+                </div>
                 {briefing && (
                   <p className="mt-4 text-base md:text-lg text-slate-700 leading-7 whitespace-pre-line">
                     {briefing}
