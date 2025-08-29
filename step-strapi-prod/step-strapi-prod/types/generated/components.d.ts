@@ -229,6 +229,8 @@ export interface ImageProfileCard extends Schema.Component {
       Attribute.Required;
     name: Attribute.String & Attribute.Required;
     linkedin: Attribute.String;
+    designation: Attribute.String;
+    company: Attribute.String;
   };
 }
 

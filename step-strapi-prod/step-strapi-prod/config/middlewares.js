@@ -30,7 +30,7 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "https//minio-ui.sjcestep.in:9000",
+            "https://minio-ui.sjcestep.in:9000",
           ],
           "media-src": [
             "'self'",
@@ -38,6 +38,7 @@ module.exports = [
             "blob:",
             "https://minio-ui.sjcestep.in:9000",
           ],
+          "script-src": ["'self'", "'unsafe-eval'"],
           upgradeInsecureRequests: null,
         },
       },

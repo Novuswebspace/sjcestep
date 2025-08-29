@@ -374,13 +374,15 @@ const Home = () => {
   const [sliderIndex, setSliderIndex] = useState(0);
 
   useEffect(() => {
+    // Change slide every 4 seconds
     const interval = setInterval(() => {
       setSliderIndex((prev) =>
         prev === featuredPrograms.length - 1 ? 0 : prev + 1
       );
-    }, 4000); // change slide every 4 seconds
+    }, 4000);
 
-    return () => clearInterval(interval); // cleanup on unmount
+    // Cleanup on unmount
+    return () => clearInterval(interval);
   }, [featuredPrograms.length]);
 
   return (

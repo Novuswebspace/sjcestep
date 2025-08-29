@@ -25,6 +25,12 @@
       "type": "string",
       "required": false,
       "regex": "^(https?|ftp):\\/\\/[^\\s/$.?#].[^\\s]*$"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
     }
   }
 }

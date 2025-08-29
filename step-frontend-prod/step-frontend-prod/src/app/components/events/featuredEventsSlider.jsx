@@ -23,7 +23,9 @@ const FeaturedEventsSlider = ({ className = "" }) => {
   };
 
   return (
-    <section className="p-5 py-6 md:py-10 w-full max-h-2xl mx-auto">
+    <section
+      className={`p-5 py-6 md:py-10 w-full max-h-2xl mx-auto ${className}`}
+    >
       <p className="px-3 py-1 text-3xl mx-auto md:mx-16 uppercase w-fit font-montserrat font-black border-lightish-gray">
         Featured Events
       </p>
