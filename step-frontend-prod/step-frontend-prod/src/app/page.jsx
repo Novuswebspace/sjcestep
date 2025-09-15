@@ -733,8 +733,8 @@ const Home = () => {
 
                   {/* Scoped styles for continuous marquee */}
                   <style>
-                  {`
-                    .logo-marquee {
+                    {`
+                      .logo-marquee {
                       display: flex;
                       width: max-content;
                       animation: scroll-left 30s linear infinite;
@@ -768,7 +768,7 @@ const Home = () => {
                         transform: translateX(0);
                       }
                     }
-                  `}
+                    `}
                   </style>
                 </div>
               </div>

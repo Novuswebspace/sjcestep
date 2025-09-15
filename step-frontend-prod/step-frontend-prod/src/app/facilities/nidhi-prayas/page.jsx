@@ -129,7 +129,11 @@ const NidhiPrayas = () => {
                 />
               ) : (
                 <div className="bg-slate-100 w-[50vw] h-[30vh] rounded-xl flex items-center justify-center  text-gray-400 text-lg">
-                  <img src="/images/programs/msme.webp" alt="nidhi-prayas" className="rounded-xl" />
+                  <img
+                    src="/images/programs/msme.webp"
+                    alt="nidhi-prayas"
+                    className="rounded-xl"
+                  />
                 </div>
               )}
             </div>
