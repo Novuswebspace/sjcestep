@@ -6,7 +6,7 @@ export const menuData = [
     title: "About",
     path: "/about-us",
     submenu: [
-      { title: "JSS MVP", path: "https://jssonline.org/" },
+      { title: "JSS MVP", path: "https://jssonline.org/", target: "_blank" },
       { title: "SJCE-STEP", path: "/about-us" },
       { title: "JSS Incubatees", path: "/about-us/jss-incubatees" },
     ],

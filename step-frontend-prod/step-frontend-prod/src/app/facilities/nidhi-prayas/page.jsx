@@ -95,7 +95,7 @@ const NidhiPrayas = () => {
         <>
           {/* Hero Section */}
           <section className="flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-10 md:py-20 gap-10">
-            <div className="flex-1 max-w-xl">
+            <div className="flex-1 max-w-xl mx-auto">
               <p className="uppercase text-blue-500 font-semibold text-sm mb-2">
                 Accelerator Program
               </p>
@@ -128,8 +128,12 @@ const NidhiPrayas = () => {
                   className="rounded-2xl shadow-lg w-80 h-80 object-cover"
                 />
               ) : (
-                <div className="bg-slate-100 w-80 h-80 flex items-center justify-center rounded-2xl text-gray-400 text-lg">
-                  Image loading...
+                <div className="bg-slate-100 w-[50vw] h-[30vh] rounded-xl flex items-center justify-center  text-gray-400 text-lg">
+                  <img
+                    src="/images/programs/msme.webp"
+                    alt="nidhi-prayas"
+                    className="rounded-xl"
+                  />
                 </div>
               )}
             </div>

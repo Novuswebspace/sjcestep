@@ -72,7 +72,15 @@ const Header = memo(({ className, item }) => {
                 {each.submenu ? (
                   <span onClick={(e) => e.preventDefault()}>{each.title}</span>
                 ) : (
-                  <Link href={each.path}>{each.title}</Link>
+                  <Link
+                    href={each.path}
+                    {...(each?.target ? { target: each.target } : {})}
+                    {...(each?.target === "_blank"
+                      ? { rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {each.title}
+                  </Link>
                 )}
                 {each.submenu && (
                   <FaChevronDown className="ml-2 text-sm group-hover:text-black" />
@@ -90,6 +98,10 @@ const Header = memo(({ className, item }) => {
                     <Link
                       key={subIndex}
                       href={sub.path}
+                      {...(sub?.target ? { target: sub.target } : {})}
+                      {...(sub?.target === "_blank"
+                        ? { rel: "noopener noreferrer" }
+                        : {})}
                       onClick={() => setActiveDropdown(null)}
                     >
                       <li className="px-3 py-2 text-gray-700 hover:text-black hover:bg-gray-100 cursor-pointer transition-all duration-300 ease-in-out">

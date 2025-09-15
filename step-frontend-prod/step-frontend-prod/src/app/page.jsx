@@ -497,7 +497,8 @@ const Home = () => {
                   className="dark:bg-black w-full md:w-auto bg-white text-black dark:text-white flex justify-center items-center"
                 >
                   <Link
-                    href="/contact"
+                    href="https://form.typeform.com/to/BdKCHrZ5"
+                    target="_blank"
                     className="flex justify-center items-center order-2 md:order-none font-semibold bg-white hover:bg-light-gray-sky text-extra-light-dark text-lg h-14 w-full md:w-auto px-6"
                   >
                     Incubate With Us
@@ -657,76 +658,118 @@ const Home = () => {
                   <h2 className="text-3xl font-bold text-center mb-8 text-slate-800">
                     Our Incubatees
                   </h2>
-
-                  {/* First Row - Slides Left to Right */}
-                  <div className="overflow-hidden mb-4">
-                    <div className="flex animate-marquee-left">
-                      {incubatees.slice(0, 4).map((incubatee) => (
-                        <div
-                          key={incubatee.id}
-                          className="flex-shrink-0 w-1/4 px-2"
-                        >
-                          <Link href={incubatee.link}>
-                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                              <h3 className="text-slate-800 font-semibold text-sm">
-                                {incubatee.name}
-                              </h3>
-                            </div>
-                          </Link>
-                        </div>
-                      ))}
-                      {/* Duplicate for seamless loop */}
-                      {incubatees.slice(0, 4).map((incubatee) => (
-                        <div
-                          key={`${incubatee.id}-duplicate`}
-                          className="flex-shrink-0 w-1/4 px-2"
-                        >
-                          <Link href={incubatee.link}>
-                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                              <h3 className="text-slate-800 font-semibold text-sm">
-                                {incubatee.name}
-                              </h3>
-                            </div>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Second Row - Slides Right to Left */}
+                  {/* Logos from public/images/home/incubatees-logo */}
                   <div className="overflow-hidden">
-                    <div className="flex animate-marquee-right">
-                      {incubatees.slice(4, 8).map((incubatee) => (
-                        <div
-                          key={incubatee.id}
-                          className="flex-shrink-0 w-1/4 px-2"
-                        >
-                          <Link href={incubatee.link}>
-                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                              <h3 className="text-slate-800 font-semibold text-sm">
-                                {incubatee.name}
-                              </h3>
+                    {/* Row 1 - scroll left */}
+                    <div className="relative">
+                      <div className="logo-marquee">
+                        {[...Array(15)].map((_, idx) => {
+                          const i = idx + 1;
+                          return (
+                            <div key={`row1-${i}`} className="logo-item">
+                              <Image
+                                src={`/images/home/incubatees-logo/image-${i}.jpg`}
+                                alt={`Incubatee logo ${i}`}
+                                width={140}
+                                height={80}
+                                className="object-contain w-[140px] h-[80px]"
+                              />
                             </div>
-                          </Link>
-                        </div>
-                      ))}
-                      {/* Duplicate for seamless loop */}
-                      {incubatees.slice(4, 8).map((incubatee) => (
-                        <div
-                          key={`${incubatee.id}-duplicate`}
-                          className="flex-shrink-0 w-1/4 px-2"
-                        >
-                          <Link href={incubatee.link}>
-                            <div className="bg-gray-100 border-2 border-slate-300 rounded-full p-4 text-center hover:bg-gray-200 transition-colors cursor-pointer">
-                              <h3 className="text-slate-800 font-semibold text-sm">
-                                {incubatee.name}
-                              </h3>
+                          );
+                        })}
+                        {/* duplicate for seamless loop */}
+                        {[...Array(15)].map((_, idx) => {
+                          const i = idx + 1;
+                          return (
+                            <div key={`row1-dup-${i}`} className="logo-item">
+                              <Image
+                                src={`/images/home/incubatees-logo/image-${i}.jpg`}
+                                alt={`Incubatee logo ${i}`}
+                                width={140}
+                                height={80}
+                                className="object-contain w-[140px] h-[80px]"
+                              />
                             </div>
-                          </Link>
-                        </div>
-                      ))}
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    {/* Row 2 - scroll right */}
+                    <div className="relative mt-6">
+                      <div className="logo-marquee reverse">
+                        {[...Array(15)].map((_, idx) => {
+                          const i = idx + 1;
+                          return (
+                            <div key={`row2-${i}`} className="logo-item">
+                              <Image
+                                src={`/images/home/incubatees-logo/image-${i}.jpg`}
+                                alt={`Incubatee logo ${i}`}
+                                width={140}
+                                height={80}
+                                className="object-contain w-[140px] h-[80px]"
+                              />
+                            </div>
+                          );
+                        })}
+                        {/* duplicate for seamless loop */}
+                        {[...Array(15)].map((_, idx) => {
+                          const i = idx + 1;
+                          return (
+                            <div key={`row2-dup-${i}`} className="logo-item">
+                              <Image
+                                src={`/images/home/incubatees-logo/image-${i}.jpg`}
+                                alt={`Incubatee logo ${i}`}
+                                width={140}
+                                height={80}
+                                className="object-contain w-[140px] h-[80px]"
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
+
+                  {/* Scoped styles for continuous marquee */}
+                  <style>
+                    {`
+                      .logo-marquee {
+                      display: flex;
+                      width: max-content;
+                      animation: scroll-left 30s linear infinite;
+                    }
+                    .logo-marquee.reverse {
+                      animation-name: scroll-right;
+                    }
+                    .logo-item {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      padding: 0.75rem 1.25rem;
+                      margin-right: 1rem;
+                      background: white;
+                      min-width: 180px;
+                      height: 100px;
+                    }
+                    @keyframes scroll-left {
+                      0% {
+                        transform: translateX(0);
+                      }
+                      100% {
+                        transform: translateX(-50%);
+                      }
+                    }
+                    @keyframes scroll-right {
+                      0% {
+                        transform: translateX(-50%);
+                      }
+                      100% {
+                        transform: translateX(0);
+                      }
+                    }
+                    `}
+                  </style>
                 </div>
               </div>
             </section>
@@ -797,7 +840,7 @@ const Home = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 mt-16">
                 {programs?.map((item) => (
                   <Link
-                    href={`/programs/${item?.attributes?.slug}`}
+                    href={`/programs/${item.attributes.slug}`}
                     key={item.id}
                   >
                     <ProgramCard imageHeight="md:h-[230px]" item={item} />

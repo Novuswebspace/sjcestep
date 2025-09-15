@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import featuredEventsData from "./data";
 
-const FeaturedEventsSlider = ({ className = "" }) => {
+const FeaturedEventsSlider = ({ className = "", imageHeight = 400 }) => {
   if (!featuredEventsData || featuredEventsData.length === 0) return null;
 
   const settings = {
@@ -34,17 +34,24 @@ const FeaturedEventsSlider = ({ className = "" }) => {
           {featuredEventsData.map((event) => (
             <div
               key={event.id}
-              className="flex flex-col p-4 bg-gray-100 rounded-xl md:flex-row items-center justify-center text-center md:text-left gap-10 max-h-[800px]"
+              className="flex flex-col p-4 bg-gray-100 rounded-xl md:flex-row items-center justify-center text-center md:text-left gap-10 h-max"
             >
-              <div className="md:w-full max-w-[70vw] mx-auto rounded-xl">
+              <div
+                className="relative md:w-full max-w-[90vw] mx-auto rounded-xl overflow-hidden"
+                style={{
+                  height:
+                    typeof imageHeight === "number"
+                      ? `${imageHeight}px`
+                      : imageHeight,
+                }}
+              >
                 <Image
                   src={event.image}
                   alt={event.alt}
-                  width={800}
-                  height={100}
-                  layout="responsive"
-                  objectFit="cover"
-                  style={{ height: "60%", width: "100%", objectFit: "cover" }}
+                  fill
+                  sizes="(min-width: 768px) 800px, 100vw"
+                  className="object-cover"
+                  priority={false}
                 />
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-center mx-auto text-center md:text-left px-2 md:px-4">
@@ -67,6 +74,10 @@ const FeaturedEventsSlider = ({ className = "" }) => {
   );
 };
 
-FeaturedEventsSlider.propTypes = { className: PropTypes.string };
+FeaturedEventsSlider.propTypes = {
+  className: PropTypes.string,
+  // Either a number (pixels) or any valid CSS height string like '50vh' or '30rem'
+  imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};
 
 export default FeaturedEventsSlider;
