@@ -81,7 +81,11 @@ const MobileMenu = ({ sidebarOpen, setSidebarOpen, item }) => {
                           {each.submenu ? (
                             <span>{each.title}</span>
                           ) : (
-                            <Link href={each?.path || "#"}>
+                            <Link
+                              href={each?.path || "#"}
+                              target={each?.target || undefined}
+                              rel={each?.target === "_blank" ? "noopener noreferrer" : undefined}
+                            >
                               <span>{each.title}</span>
                             </Link>
                           )}
@@ -103,6 +107,8 @@ const MobileMenu = ({ sidebarOpen, setSidebarOpen, item }) => {
                               <Link
                                 key={subIndex}
                                 href={sub.path}
+                                target={sub?.target || undefined}
+                                rel={sub?.target === "_blank" ? "noopener noreferrer" : undefined}
                                 onClick={() => setSidebarOpen(false)}
                               >
                                 <li className="py-1.5 text-gray-700 hover:text-black text-xm cursor-pointer">

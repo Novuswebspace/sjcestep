@@ -89,7 +89,7 @@ const AboutUs = () => {
             </div>
             <div className="mt-12 lg:mt-16 h-72 lg:h-auto">
               <img
-                src={aboutData?.aboutImage?.data?.attributes?.url}
+                src="/images/about-us/about.jpg"
                 alt="sjce-image"
                 className="object-cover w-full h-full"
               />
