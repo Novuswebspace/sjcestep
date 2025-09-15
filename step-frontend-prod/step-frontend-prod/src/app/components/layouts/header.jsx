@@ -74,8 +74,10 @@ const Header = memo(({ className, item }) => {
                 ) : (
                   <Link
                     href={each.path}
-                    target={each?.target || undefined}
-                    rel={each?.target === "_blank" ? "noopener noreferrer" : undefined}
+                    {...(each?.target ? { target: each.target } : {})}
+                    {...(each?.target === "_blank"
+                      ? { rel: "noopener noreferrer" }
+                      : {})}
                   >
                     {each.title}
                   </Link>
@@ -96,8 +98,10 @@ const Header = memo(({ className, item }) => {
                     <Link
                       key={subIndex}
                       href={sub.path}
-                      target={sub?.target || undefined}
-                      rel={sub?.target === "_blank" ? "noopener noreferrer" : undefined}
+                      {...(sub?.target ? { target: sub.target } : {})}
+                      {...(sub?.target === "_blank"
+                        ? { rel: "noopener noreferrer" }
+                        : {})}
                       onClick={() => setActiveDropdown(null)}
                     >
                       <li className="px-3 py-2 text-gray-700 hover:text-black hover:bg-gray-100 cursor-pointer transition-all duration-300 ease-in-out">

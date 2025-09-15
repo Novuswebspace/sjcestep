@@ -38,7 +38,12 @@ const FeaturedEventsSlider = ({ className = "", imageHeight = 400 }) => {
             >
               <div
                 className="relative md:w-full max-w-[90vw] mx-auto rounded-xl overflow-hidden"
-                style={{ height: typeof imageHeight === "number" ? `${imageHeight}px` : imageHeight }}
+                style={{
+                  height:
+                    typeof imageHeight === "number"
+                      ? `${imageHeight}px`
+                      : imageHeight,
+                }}
               >
                 <Image
                   src={event.image}

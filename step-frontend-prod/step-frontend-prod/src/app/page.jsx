@@ -732,7 +732,8 @@ const Home = () => {
                   </div>
 
                   {/* Scoped styles for continuous marquee */}
-                  <style jsx>{`
+                  <style>
+                  {`
                     .logo-marquee {
                       display: flex;
                       width: max-content;
@@ -748,20 +749,27 @@ const Home = () => {
                       padding: 0.75rem 1.25rem;
                       margin-right: 1rem;
                       background: white;
-                      // border: 2px solid #cbd5e1;
-                      // border-radius: 9999px;
                       min-width: 180px;
                       height: 100px;
                     }
                     @keyframes scroll-left {
-                      0% { transform: translateX(0); }
-                      100% { transform: translateX(-50%); }
+                      0% {
+                        transform: translateX(0);
+                      }
+                      100% {
+                        transform: translateX(-50%);
+                      }
                     }
                     @keyframes scroll-right {
-                      0% { transform: translateX(-50%); }
-                      100% { transform: translateX(0); }
+                      0% {
+                        transform: translateX(-50%);
+                      }
+                      100% {
+                        transform: translateX(0);
+                      }
                     }
-                  `}</style>
+                  `}
+                  </style>
                 </div>
               </div>
             </section>
@@ -832,7 +840,7 @@ const Home = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-16 gap-x-10 mt-16">
                 {programs?.map((item) => (
                   <Link
-                    href={`/programs/${item?.attributes?.slug}`}
+                    href={`/programs/${item.attributes.slug}`}
                     key={item.id}
                   >
                     <ProgramCard imageHeight="md:h-[230px]" item={item} />
