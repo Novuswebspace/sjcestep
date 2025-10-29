@@ -192,13 +192,6 @@ const Home = () => {
     },
   ];
 
-  const resetPopup = () => {
-    if (typeof window !== "undefined") {
-      localStorage.removeItem("hasSeenProgramPopup");
-      setShowPopup(true);
-    }
-  };
-
   // Data fetching for all data in home page
   const fetchHomeData = async () => {
     const { data } = await axios.get(
@@ -298,14 +291,10 @@ const Home = () => {
     refetchOnWindowFocus: false,
   });
 
-  // Popup logic for upcoming events
+  // Popup logic for upcoming events - shows on every visit
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hasSeenPopup = localStorage.getItem("hasSeenProgramPopup");
-      if (!hasSeenPopup && upcomingEvents && upcomingEvents.length > 0) {
-        setShowPopup(true);
-        localStorage.setItem("hasSeenProgramPopup", "true");
-      }
+    if (upcomingEvents && upcomingEvents.length > 0) {
+      setShowPopup(true);
     }
   }, [upcomingEvents]);
 
@@ -394,9 +383,19 @@ const Home = () => {
                   <h3 className="font-montserrat font-black text-lg mb-2">
                     {event.attributes?.title}
                   </h3>
-                  <p className="text-sm text-tertiary-gray line-clamp-2">
+                  <p className="text-sm text-tertiary-gray line-clamp-2 mb-3">
                     {event.attributes?.desc}
                   </p>
+                  {event.attributes?.registrationLink && (
+                    <Link
+                      href={event.attributes.registrationLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-md hover:from-blue-700 hover:to-purple-700 transition-all text-sm font-semibold"
+                    >
+                      Register Now
+                    </Link>
+                  )}
                 </div>
               ))}
               <div className="text-center mt-6">
