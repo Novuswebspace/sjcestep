@@ -293,9 +293,7 @@ const Home = () => {
 
   // Popup logic for upcoming events - shows on every visit
   useEffect(() => {
-    if (upcomingEvents && upcomingEvents.length > 0) {
-      setShowPopup(true);
-    }
+    if (upcomingEvents && upcomingEvents.length > 0) setShowPopup(true);
   }, [upcomingEvents]);
 
   // Facilities data
